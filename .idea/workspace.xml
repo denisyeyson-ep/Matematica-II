@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a8a9faf-a936-49f8-9e30-b144defe4efe" name="Changes" comment="" />
+    <list default="true" id="0a8a9faf-a936-49f8-9e30-b144defe4efe" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/generate-session-pdfs.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/generate-session-pdfs.mjs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="73" />
+    <option name="cachedIndexableFilesCount" value="91" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
@@ -23,35 +26,35 @@
     &quot;assignee&quot;: &quot;denisyeyson-ep&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/denisyeyson-ep/Repo-Matematica2.git&quot;,
-    &quot;accountId&quot;: &quot;14b75888-e10d-49c5-a299-3b897be6900a&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/denisyeyson-ep/Matematica-II.git",
+    "accountId": "14b75888-e10d-49c5-a299-3b897be6900a"
   }
-}</component>
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.6616450544691261" />
-      <entry key="MS500" value="2.550791273772435" />
-      <entry key="S2" value="2.8736027184882866" />
-      <entry key="S5" value="2.948184662402891" />
-      <entry key="S10" value="2.9738779103335267" />
-      <entry key="S30" value="3.0273821787976294" />
-      <entry key="S60" value="3.7706465252283583" />
-      <entry key="M2" value="6.616936671291287" />
-      <entry key="M5" value="12.148618869559614" />
-      <entry key="M10" value="15.469669555876683" />
-      <entry key="M15" value="16.8263907379063" />
-      <entry key="M30" value="18.33110389350679" />
-      <entry key="H1" value="19.143949938494497" />
-      <entry key="H2" value="19.566433350729174" />
-      <entry key="H4" value="19.781813226783093" />
-      <entry key="D1" value="19.96343906369186" />
-      <entry key="W1" value="19.994772177136745" />
+      <entry key="MS100" value="1.000000000099683" />
+      <entry key="MS500" value="1.0234544008870223" />
+      <entry key="S2" value="1.8909416971300448" />
+      <entry key="S5" value="2.845731916823758" />
+      <entry key="S10" value="3.3545686034915994" />
+      <entry key="S30" value="4.9929070894701955" />
+      <entry key="S60" value="10.832757211886339" />
+      <entry key="M2" value="21.595474387691528" />
+      <entry key="M5" value="37.657806305406154" />
+      <entry key="M10" value="46.98672275449317" />
+      <entry key="M15" value="50.83706786578961" />
+      <entry key="M30" value="55.151296351969414" />
+      <entry key="H1" value="57.5039781908298" />
+      <entry key="H2" value="58.733421111065944" />
+      <entry key="H4" value="59.361984397428444" />
+      <entry key="D1" value="59.893000375165165" />
+      <entry key="W1" value="59.984697989781004" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -73,23 +76,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.5566523269014179" />
-      <entry key="MS500" value="2.5160116562114" />
-      <entry key="S2" value="2.863683188343992" />
-      <entry key="S5" value="2.944104065230295" />
-      <entry key="S10" value="2.971818198748312" />
-      <entry key="S30" value="3.02667879725667" />
-      <entry key="S60" value="3.7701584301711155" />
-      <entry key="M2" value="6.6164208317958" />
-      <entry key="M5" value="12.148196135657438" />
-      <entry key="M10" value="15.469392453722433" />
-      <entry key="M15" value="16.826188023970584" />
-      <entry key="M30" value="18.330992544375935" />
-      <entry key="H1" value="19.143891560622247" />
-      <entry key="H2" value="19.566403458682103" />
-      <entry key="H4" value="19.78179810146452" />
-      <entry key="D1" value="19.963436517599707" />
-      <entry key="W1" value="19.99477181278802" />
+      <entry key="MS100" value="0.06886906983754176" />
+      <entry key="MS500" value="0.6088439383938385" />
+      <entry key="S2" value="1.7636705782501996" />
+      <entry key="S5" value="2.7919225027413437" />
+      <entry key="S10" value="3.327080236273442" />
+      <entry key="S30" value="4.983420325049023" />
+      <entry key="S60" value="10.82752945960738" />
+      <entry key="M2" value="21.59234695629954" />
+      <entry key="M5" value="37.656177624996566" />
+      <entry key="M10" value="46.98578356168462" />
+      <entry key="M15" value="50.83640574606801" />
+      <entry key="M30" value="55.15094464542855" />
+      <entry key="H1" value="57.50379660993851" />
+      <entry key="H2" value="58.7333288112268" />
+      <entry key="H4" value="59.36193786001925" />
+      <entry key="D1" value="59.8929925642295" />
+      <entry key="W1" value="59.98469687258177" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -106,6 +109,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
@@ -138,7 +142,8 @@
       <option name="presentableId" value="Default" />
       <updated>1788277453324</updated>
       <workItem from="1788277454472" duration="943000" />
-      <workItem from="1788279783507" duration="525000" />
+      <workItem from="1788279783507" duration="1163000" />
+      <workItem from="1788281081970" duration="16000" />
     </task>
     <servers />
   </component>

@@ -1,36 +1,65 @@
 import { chromium } from 'playwright';
-import { mkdir } from 'node:fs/promises';
-import { spawn } from 'node:child_process';
+import { mkdir, readFile, stat } from 'node:fs/promises';
+import { createServer } from 'node:http';
 import process from 'node:process';
-import { join } from 'node:path';
+import { extname, join, normalize } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const repository = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? '';
 const projectBase = process.env.GITHUB_ACTIONS === 'true' && repository && !repository.endsWith('.github.io')
-  ? `/${repository}`
-  : '';
+    ? `/${repository}`
+    : '';
 const origin = 'http://127.0.0.1:4321';
+const distDirectory = fileURLToPath(new URL('../dist/', import.meta.url));
 const outputDirectory = fileURLToPath(new URL('../dist/pdfs/', import.meta.url));
 const limit = Number(process.env.PDF_LIMIT || 36);
 
 await mkdir(outputDirectory, { recursive: true });
 
-const server = spawn(process.execPath, ['./node_modules/astro/astro.js', 'preview', '--host', '127.0.0.1', '--port', '4321'], {
-  stdio: ['ignore', 'pipe', 'pipe'],
-  env: process.env,
+const contentTypes = {
+  '.css': 'text/css; charset=utf-8',
+  '.html': 'text/html; charset=utf-8',
+  '.js': 'text/javascript; charset=utf-8',
+  '.json': 'application/json; charset=utf-8',
+  '.svg': 'image/svg+xml',
+  '.woff2': 'font/woff2',
+};
+
+const server = createServer(async (request, response) => {
+  try {
+    const requestUrl = new URL(request.url ?? '/', origin);
+    let pathname = decodeURIComponent(requestUrl.pathname);
+
+    if (projectBase && pathname.startsWith(projectBase)) {
+      pathname = pathname.slice(projectBase.length) || '/';
+    }
+
+    let relativePath = pathname.replace(/^\/+/, '');
+    if (!relativePath || relativePath.endsWith('/')) relativePath += 'index.html';
+    const safePath = normalize(relativePath).replace(/^(\.\.(\/|\\|$))+/, '');
+    let filePath = join(distDirectory, safePath);
+
+    try {
+      if ((await stat(filePath)).isDirectory()) filePath = join(filePath, 'index.html');
+    } catch {
+      response.writeHead(404).end('Not found');
+      return;
+    }
+
+    const file = await readFile(filePath);
+    response.writeHead(200, { 'Content-Type': contentTypes[extname(filePath)] ?? 'application/octet-stream' });
+    response.end(file);
+  } catch (error) {
+    console.error(error);
+    response.writeHead(500).end('Internal server error');
+  }
 });
 
-async function waitForServer() {
-  const deadline = Date.now() + 30_000;
-  while (Date.now() < deadline) {
-    try {
-      const response = await fetch(`${origin}${projectBase}/`);
-      if (response.ok) return;
-    } catch {}
-    await new Promise((resolve) => setTimeout(resolve, 250));
-  }
-  throw new Error('El servidor de vista previa no inició a tiempo.');
-}
+await new Promise((resolve, reject) => {
+  server.once('error', reject);
+  server.listen(4321, '127.0.0.1', resolve);
+});
+console.log(`Servidor PDF listo en ${origin}${projectBase}/`);
 
 function pad(value) {
   return String(value).padStart(2, '0');
@@ -38,7 +67,6 @@ function pad(value) {
 
 let browser;
 try {
-  await waitForServer();
   browser = await chromium.launch({ headless: true });
   const context = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
   await context.route('https://www.geogebra.org/**', (route) => route.abort());
@@ -69,5 +97,5 @@ try {
   }
 } finally {
   await browser?.close();
-  server.kill('SIGTERM');
+  await new Promise((resolve) => server.close(resolve));
 }
