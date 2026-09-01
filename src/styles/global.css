@@ -1453,6 +1453,11 @@ svg {
     display: none !important;
   }
 
+  /* El PDF ya muestra el acceso mediante QR y enlace bajo la imagen. */
+  .geogebra-topbar {
+    display: none !important;
+  }
+
   .pdf-geogebra-preview {
     display: block;
     width: 100%;
@@ -1502,10 +1507,6 @@ svg {
     color: #1769aa;
     font-size: 8pt;
     overflow-wrap: anywhere;
-  }
-
-  .geogebra-topbar {
-    background: #f5f8fc;
   }
 
   .geogebra-actions .button-disabled,
