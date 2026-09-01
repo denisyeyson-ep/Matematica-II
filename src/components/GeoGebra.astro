@@ -1,6 +1,7 @@
 ---
 import { Download, ExternalLink, LineChart, Info } from '@lucide/astro';
 import { withBase } from '../lib/course';
+import QRCode from 'qrcode';
 
 interface Props {
   id?: string;
@@ -15,6 +16,14 @@ const materialUrl = 'https://www.geogebra.org/m/' + cleanId;
 const iframeUrl = 'https://www.geogebra.org/material/iframe/id/' + cleanId
   + '/width/980/height/620/border/888888/sfsb/true/smb/false/stb/false'
   + '/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false';
+const qrDataUrl = cleanId
+  ? await QRCode.toDataURL(materialUrl, {
+      width: 180,
+      margin: 1,
+      errorCorrectionLevel: 'M',
+      color: { dark: '#0f3150', light: '#ffffff' },
+    })
+  : '';
 ---
 
 <section class="geogebra-card" aria-label={titulo} data-pagefind-ignore>
@@ -39,15 +48,25 @@ const iframeUrl = 'https://www.geogebra.org/material/iframe/id/' + cleanId
   </div>
 
   {cleanId ? (
-    <div class="geogebra-frame">
-      <iframe
-        title={titulo}
-        src={iframeUrl}
-        loading="lazy"
-        allowfullscreen
-        referrerpolicy="strict-origin-when-cross-origin"
-      ></iframe>
-    </div>
+    <>
+      <div class="geogebra-frame">
+        <iframe
+          title={titulo}
+          src={iframeUrl}
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin"
+        ></iframe>
+      </div>
+      <div class="pdf-geogebra-access pdf-only">
+        <img src={qrDataUrl} width="112" height="112" alt={'Código QR para abrir ' + titulo + ' en GeoGebra'} />
+        <div>
+          <strong>Explora el gráfico desde tu celular</strong>
+          <p>Escanea este código QR para abrir la construcción interactiva en GeoGebra.</p>
+          <span>{materialUrl}</span>
+        </div>
+      </div>
+    </>
   ) : (
     <div class="geogebra-placeholder">
       <div class="geogebra-placeholder-icon"><LineChart size={34} aria-hidden="true" /></div>

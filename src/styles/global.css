@@ -64,8 +64,8 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(ellipse 62% 34% at 50% -10%, rgb(44 125 178 / 11%), transparent 72%),
-    var(--bg);
+          radial-gradient(ellipse 62% 34% at 50% -10%, rgb(44 125 178 / 11%), transparent 72%),
+          var(--bg);
   color: var(--text);
   font-family: "DM Sans", "Segoe UI", sans-serif;
   font-size: 15px;
@@ -942,6 +942,11 @@ svg {
   border: 0;
 }
 
+.pdf-only,
+.pdf-geogebra-preview {
+  display: none;
+}
+
 .geogebra-placeholder {
   display: grid;
   min-height: 220px;
@@ -1446,6 +1451,57 @@ svg {
 
   .geogebra-frame {
     display: none !important;
+  }
+
+  .pdf-geogebra-preview {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 150mm;
+    object-fit: contain;
+    margin-top: 4mm;
+    border: 1px solid var(--line-strong);
+    border-radius: 10px;
+    background: #fff;
+  }
+
+  .pdf-only {
+    display: flex !important;
+  }
+
+  .pdf-geogebra-access {
+    align-items: center;
+    gap: 5mm;
+    margin-top: 4mm;
+    padding: 4mm;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: #f7fafc;
+    break-inside: avoid;
+  }
+
+  .pdf-geogebra-access img {
+    width: 28mm;
+    height: 28mm;
+    flex: 0 0 auto;
+  }
+
+  .pdf-geogebra-access strong {
+    display: block;
+    color: #0f527f;
+    font-size: 11pt;
+  }
+
+  .pdf-geogebra-access p {
+    margin: 1.5mm 0;
+    color: var(--text-muted);
+    font-size: 9pt;
+  }
+
+  .pdf-geogebra-access span {
+    color: #1769aa;
+    font-size: 8pt;
+    overflow-wrap: anywhere;
   }
 
   .geogebra-topbar {

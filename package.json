@@ -19,12 +19,14 @@
     "@lucide/astro": "^1.33.0",
     "astro": "^7.2.4",
     "katex": "^0.18.4",
+    "qrcode": "^1.5.4",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0"
   },
   "devDependencies": {
     "pagefind": "^1.5.2",
     "playwright": "^1.55.0",
+    "@types/qrcode": "^1.5.5",
     "typescript": "^5.9.3"
   },
   "type": "module",
