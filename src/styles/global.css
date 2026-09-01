@@ -1476,15 +1476,25 @@ svg {
   }
 
   .pdf-geogebra-vector {
-    padding: 2mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 110mm;
+    max-height: 110mm;
+    padding: 6mm;
+    overflow: hidden;
   }
 
   .pdf-geogebra-vector svg {
     display: block;
     width: 100%;
-    height: auto;
-    max-height: 146mm;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     margin: auto;
+    overflow: visible;
   }
 
   .pdf-only {

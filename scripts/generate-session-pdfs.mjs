@@ -109,7 +109,17 @@ try {
                   preview.innerHTML = markup;
                   const svg = preview.querySelector('svg');
                   if (!svg) throw new Error('El archivo no contiene un elemento SVG válido.');
+                  if (!svg.hasAttribute('viewBox')) {
+                    const width = Number.parseFloat(svg.getAttribute('width') || '');
+                    const height = Number.parseFloat(svg.getAttribute('height') || '');
+                    if (width > 0 && height > 0) svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+                  }
+                  svg.removeAttribute('width');
+                  svg.removeAttribute('height');
                   svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+                  svg.style.width = '100%';
+                  svg.style.height = '100%';
+                  svg.style.overflow = 'visible';
                   element.insertAdjacentElement('beforebegin', preview);
                 }, svgMarkup);
                 vectorInserted = true;
