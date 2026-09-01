@@ -204,10 +204,6 @@ svg {
   gap: 7px;
 }
 
-.session-download {
-  margin-top: 24px;
-}
-
 .nav-link,
 .mobile-nav-link {
   padding: 9px 13px;
@@ -381,6 +377,11 @@ svg {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+/* Separar la acción principal de las etiquetas de la sesión. */
+.session-download {
+  margin-top: 24px;
 }
 
 .profile-card,
@@ -1472,6 +1473,18 @@ svg {
     border: 1px solid var(--line-strong);
     border-radius: 10px;
     background: #fff;
+  }
+
+  .pdf-geogebra-vector {
+    padding: 2mm;
+  }
+
+  .pdf-geogebra-vector svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 146mm;
+    margin: auto;
   }
 
   .pdf-only {

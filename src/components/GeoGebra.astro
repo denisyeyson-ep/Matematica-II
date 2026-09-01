@@ -12,6 +12,12 @@ interface Props {
 const { id = '', titulo = 'Gráfico interactivo de GeoGebra', archivo = '' } = Astro.props;
 const cleanId = id.trim();
 const downloadUrl = archivo && archivo.startsWith('/') ? withBase(archivo) : archivo;
+const localDirectory = archivo.startsWith('/')
+  ? archivo.slice(0, archivo.lastIndexOf('/') + 1)
+  : '';
+const svgUrl = cleanId && localDirectory
+  ? withBase(localDirectory + cleanId + '.svg')
+  : '';
 const materialUrl = 'https://www.geogebra.org/m/' + cleanId;
 const iframeUrl = 'https://www.geogebra.org/material/iframe/id/' + cleanId
   + '/width/980/height/620/border/888888/sfsb/true/smb/false/stb/false'
@@ -49,7 +55,7 @@ const qrDataUrl = cleanId
 
   {cleanId ? (
     <>
-      <div class="geogebra-frame">
+      <div class="geogebra-frame" data-pdf-svg={svgUrl || undefined}>
         <iframe
           title={titulo}
           src={iframeUrl}

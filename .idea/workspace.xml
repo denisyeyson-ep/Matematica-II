@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0a8a9faf-a936-49f8-9e30-b144defe4efe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/geogebra/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/geogebra/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/generate-session-pdfs.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/generate-session-pdfs.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/portfolio.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/portfolio.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/sesiones/semana-01-sesion-01.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/sesiones/semana-01-sesion-01.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GeoGebra.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeoGebra.astro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/global.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="91" />
+    <option name="cachedIndexableFilesCount" value="83" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
@@ -31,73 +29,73 @@
     &quot;assignee&quot;: &quot;denisyeyson-ep&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/denisyeyson-ep/Matematica-II.git",
-    "accountId": "14b75888-e10d-49c5-a299-3b897be6900a"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/denisyeyson-ep/Matematica-II.git&quot;,
+    &quot;accountId&quot;: &quot;14b75888-e10d-49c5-a299-3b897be6900a&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="2.2289465786207234" />
-      <entry key="MS500" value="2.791068257939092" />
-      <entry key="S2" value="2.9443683892105827" />
-      <entry key="S5" value="2.977459649336274" />
-      <entry key="S10" value="2.988681260592089" />
-      <entry key="S30" value="2.996443780472328" />
-      <entry key="S60" value="3.0232340828955286" />
-      <entry key="M2" value="3.436214515580929" />
-      <entry key="M5" value="7.001814832594522" />
-      <entry key="M10" value="14.9331944569836" />
-      <entry key="M15" value="23.694345118858738" />
-      <entry key="M30" value="47.125955468799894" />
-      <entry key="H1" value="73.85230065459335" />
-      <entry key="H2" value="94.91947465894592" />
-      <entry key="H4" value="108.2777190280011" />
-      <entry key="D1" value="121.19738182835144" />
-      <entry key="W1" value="123.5949060441557" />
+      <entry key="MS100" value="1.000150318338311" />
+      <entry key="MS500" value="1.6089280132434314" />
+      <entry key="S2" value="4.966367366854675" />
+      <entry key="S5" value="7.008675047913834" />
+      <entry key="S10" value="7.9275621131642025" />
+      <entry key="S30" value="8.953941733464944" />
+      <entry key="S60" value="10.235425299147941" />
+      <entry key="M2" value="12.515909613206073" />
+      <entry key="M5" value="20.67157538681047" />
+      <entry key="M10" value="33.02232070738989" />
+      <entry key="M15" value="43.8724594740658" />
+      <entry key="M30" value="70.67365993111697" />
+      <entry key="H1" value="101.87774395814046" />
+      <entry key="H2" value="127.42745985167917" />
+      <entry key="H4" value="144.04846985867653" />
+      <entry key="D1" value="160.41389922800752" />
+      <entry key="W1" value="163.4808855351566" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="0.0" />
-      <entry key="S30" value="0.0" />
-      <entry key="S60" value="0.0" />
-      <entry key="M2" value="0.0" />
-      <entry key="M5" value="0.0" />
-      <entry key="M10" value="0.0" />
-      <entry key="M15" value="0.0" />
-      <entry key="M30" value="0.0" />
-      <entry key="H1" value="0.0" />
-      <entry key="H2" value="0.0" />
-      <entry key="H4" value="0.0" />
-      <entry key="D1" value="0.0" />
-      <entry key="W1" value="0.0" />
+      <entry key="S2" value="1.741305111645654E-95" />
+      <entry key="S5" value="1.2483890479331526E-38" />
+      <entry key="S10" value="1.1173133168154542E-19" />
+      <entry key="S30" value="4.816427103768308E-7" />
+      <entry key="S60" value="6.940048345486003E-4" />
+      <entry key="M2" value="0.02634397150295681" />
+      <entry key="M5" value="0.23349226558502167" />
+      <entry key="M10" value="0.48321037404532385" />
+      <entry key="M15" value="0.615777996672782" />
+      <entry key="M30" value="0.7847152328537927" />
+      <entry key="H1" value="0.8858415393589265" />
+      <entry key="H2" value="0.9411915529577001" />
+      <entry key="H4" value="0.9701502733894887" />
+      <entry key="D1" value="0.9949620170108704" />
+      <entry key="W1" value="0.9992787293250368" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.061489891907776" />
-      <entry key="MS500" value="2.7503503897975348" />
-      <entry key="S2" value="2.9337709309629916" />
-      <entry key="S5" value="2.9731857239387054" />
-      <entry key="S10" value="2.9865384158793633" />
-      <entry key="S30" value="2.99572813336712" />
-      <entry key="S60" value="3.0228707166863917" />
-      <entry key="M2" value="3.435961423997296" />
-      <entry key="M5" value="7.001402226848416" />
-      <entry key="M10" value="14.932627301654822" />
-      <entry key="M15" value="23.693737369913475" />
-      <entry key="M30" value="47.12539924072227" />
-      <entry key="H1" value="73.85189841888844" />
-      <entry key="H2" value="94.91922802293442" />
-      <entry key="H4" value="108.27758176640528" />
-      <entry key="D1" value="121.19735674921002" />
-      <entry key="W1" value="123.59490240364603" />
+      <entry key="MS100" value="0.9728004592419682" />
+      <entry key="MS500" value="1.5987050677637538" />
+      <entry key="S2" value="4.956019208863011" />
+      <entry key="S5" value="7.002456577411845" />
+      <entry key="S10" value="7.923972114397" />
+      <entry key="S30" value="8.95255283369668" />
+      <entry key="S60" value="10.235271152577528" />
+      <entry key="M2" value="12.541335893057742" />
+      <entry key="M5" value="20.903295710685406" />
+      <entry key="M10" value="33.503651078530666" />
+      <entry key="M15" value="44.48652250706636" />
+      <entry key="M30" value="71.45709567353465" />
+      <entry key="H1" value="102.76275518262429" />
+      <entry key="H2" value="128.36816760737676" />
+      <entry key="H4" value="145.01835723331922" />
+      <entry key="D1" value="161.4088141051814" />
+      <entry key="W1" value="164.4801574428721" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -119,7 +117,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "javascript.preferred.runtime.type.id": "node",
-    "last_opened_file_path": "/home/denisyeyson/Documentos/Portafolio_Astro_Matematica_GitHub_Pages/public/geogebra",
+    "last_opened_file_path": "/media/denisyeyson/Compartido/Proyectos/UTP/Matematica-II/public/geogebra/semana-03/sesion-01",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -150,6 +148,7 @@
       <workItem from="1788277454472" duration="943000" />
       <workItem from="1788279783507" duration="1163000" />
       <workItem from="1788281081970" duration="3940000" />
+      <workItem from="1788286453764" duration="2148000" />
     </task>
     <servers />
   </component>

@@ -91,6 +91,38 @@ try {
       const graphCount = await graphs.count();
       for (let graphIndex = 0; graphIndex < graphCount; graphIndex += 1) {
         const graph = graphs.nth(graphIndex);
+        let vectorInserted = false;
+
+        const svgSource = await graph.getAttribute('data-pdf-svg');
+        if (svgSource) {
+          try {
+            const svgAddress = new URL(svgSource, page.url()).href;
+            const svgResponse = await context.request.get(svgAddress);
+            if (svgResponse.ok()) {
+              const svgMarkup = await svgResponse.text();
+              if (/<svg(?:\s|>)/i.test(svgMarkup)) {
+                await graph.evaluate((element, markup) => {
+                  const preview = document.createElement('div');
+                  preview.className = 'pdf-geogebra-preview pdf-geogebra-vector';
+                  preview.setAttribute('role', 'img');
+                  preview.setAttribute('aria-label', 'Vista vectorial del gráfico de GeoGebra');
+                  preview.innerHTML = markup;
+                  const svg = preview.querySelector('svg');
+                  if (!svg) throw new Error('El archivo no contiene un elemento SVG válido.');
+                  svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+                  element.insertAdjacentElement('beforebegin', preview);
+                }, svgMarkup);
+                vectorInserted = true;
+                console.log(`SVG vectorial: ${svgSource}`);
+              }
+            }
+          } catch (error) {
+            console.warn(`No se pudo usar ${svgSource}; se generará una captura PNG:`, error.message);
+          }
+        }
+
+        if (vectorInserted) continue;
+
         try {
           await graph.scrollIntoViewIfNeeded();
           // Los iframes usan carga diferida; damos tiempo a GeoGebra para dibujar la vista.
