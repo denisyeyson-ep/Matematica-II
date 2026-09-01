@@ -120,6 +120,10 @@ try {
                   svg.style.width = '100%';
                   svg.style.height = '100%';
                   svg.style.overflow = 'visible';
+                  const viewBox = svg.getAttribute('viewBox')?.trim().split(/[\s,]+/).map(Number);
+                  if (viewBox?.length === 4 && viewBox[2] > 0 && viewBox[3] > 0) {
+                    preview.style.aspectRatio = `${viewBox[2]} / ${viewBox[3]}`;
+                  }
                   element.insertAdjacentElement('beforebegin', preview);
                 }, svgMarkup);
                 vectorInserted = true;

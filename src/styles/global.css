@@ -1481,9 +1481,9 @@ svg {
     justify-content: center;
     box-sizing: border-box;
     width: 100%;
-    height: 110mm;
-    max-height: 110mm;
-    padding: 6mm;
+    height: auto;
+    max-height: 136mm;
+    padding: 1.5mm;
     overflow: hidden;
   }
 
