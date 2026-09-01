@@ -54,12 +54,13 @@ const studentInitials = portfolio.student.split(' ').slice(0, 2).map((word) => w
       </aside>
     </div>
   </section>
-
+<section class="container section-block">
   <section class="container stats-grid" aria-label="Resumen del curso">
     <div class="stat-card"><span class="stat-label">Semanas académicas</span><strong class="stat-value">{portfolio.weeks}</strong></div>
     <div class="stat-card"><span class="stat-label">Sesiones de clase</span><strong class="stat-value">{portfolio.weeks * portfolio.sessionsPerWeek}</strong></div>
     <div class="stat-card"><span class="stat-label">Ejercicios previstos</span><strong class="stat-value">{portfolio.weeks * portfolio.sessionsPerWeek * portfolio.exercisesPerSession}</strong></div>
     <div class="stat-card"><span class="stat-label">Sesiones completadas</span><strong class="stat-value">{String(complete).padStart(2, '0')}</strong></div>
+  </section>
   </section>
 
   <section class="container section-block">

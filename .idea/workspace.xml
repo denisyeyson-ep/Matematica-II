@@ -7,9 +7,10 @@
     <list default="true" id="0a8a9faf-a936-49f8-9e30-b144defe4efe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/generate-session-pdfs.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/generate-session-pdfs.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GeoGebra.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeoGebra.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/portfolio.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/portfolio.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/sesiones/semana-01-sesion-01.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/sesiones/semana-01-sesion-01.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.astro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/global.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,23 +43,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.7981054452305127" />
-      <entry key="MS500" value="2.640239998484027" />
-      <entry key="S2" value="4.194312798170621" />
-      <entry key="S5" value="8.13326004364464" />
-      <entry key="S10" value="12.248920911935977" />
-      <entry key="S30" value="18.490622590348778" />
-      <entry key="S60" value="25.31949183588805" />
-      <entry key="M2" value="36.71203589232751" />
-      <entry key="M5" value="53.825724678311516" />
-      <entry key="M10" value="63.87219040236574" />
-      <entry key="M15" value="68.03926998427276" />
-      <entry key="M30" value="72.72165954243478" />
-      <entry key="H1" value="75.2807681198426" />
-      <entry key="H2" value="76.61962203959565" />
-      <entry key="H4" value="77.30452381800269" />
-      <entry key="D1" value="77.88334460016537" />
-      <entry key="W1" value="77.9833166439973" />
+      <entry key="MS100" value="2.2289465786207234" />
+      <entry key="MS500" value="2.791068257939092" />
+      <entry key="S2" value="2.9443683892105827" />
+      <entry key="S5" value="2.977459649336274" />
+      <entry key="S10" value="2.988681260592089" />
+      <entry key="S30" value="2.996443780472328" />
+      <entry key="S60" value="3.0232340828955286" />
+      <entry key="M2" value="3.436214515580929" />
+      <entry key="M5" value="7.001814832594522" />
+      <entry key="M10" value="14.9331944569836" />
+      <entry key="M15" value="23.694345118858738" />
+      <entry key="M30" value="47.125955468799894" />
+      <entry key="H1" value="73.85230065459335" />
+      <entry key="H2" value="94.91947465894592" />
+      <entry key="H4" value="108.2777190280011" />
+      <entry key="D1" value="121.19738182835144" />
+      <entry key="W1" value="123.5949060441557" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -80,23 +81,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.7330231946901193" />
-      <entry key="MS500" value="2.620752499490098" />
-      <entry key="S2" value="4.18464570661224" />
-      <entry key="S5" value="8.118241987244497" />
-      <entry key="S10" value="12.231674568724067" />
-      <entry key="S30" value="18.479486785437352" />
-      <entry key="S60" value="25.31249598467607" />
-      <entry key="M2" value="36.707755672941005" />
-      <entry key="M5" value="53.82355570755779" />
-      <entry key="M10" value="63.87096349350378" />
-      <entry key="M15" value="68.03841145578635" />
-      <entry key="M30" value="72.72120708992705" />
-      <entry key="H1" value="75.28053547645418" />
-      <entry key="H2" value="76.61950402848981" />
-      <entry key="H4" value="77.30446437894018" />
-      <entry key="D1" value="77.88333463247339" />
-      <entry key="W1" value="77.98331521853012" />
+      <entry key="MS100" value="2.061489891907776" />
+      <entry key="MS500" value="2.7503503897975348" />
+      <entry key="S2" value="2.9337709309629916" />
+      <entry key="S5" value="2.9731857239387054" />
+      <entry key="S10" value="2.9865384158793633" />
+      <entry key="S30" value="2.99572813336712" />
+      <entry key="S60" value="3.0228707166863917" />
+      <entry key="M2" value="3.435961423997296" />
+      <entry key="M5" value="7.001402226848416" />
+      <entry key="M10" value="14.932627301654822" />
+      <entry key="M15" value="23.693737369913475" />
+      <entry key="M30" value="47.12539924072227" />
+      <entry key="H1" value="73.85189841888844" />
+      <entry key="H2" value="94.91922802293442" />
+      <entry key="H4" value="108.27758176640528" />
+      <entry key="D1" value="121.19735674921002" />
+      <entry key="W1" value="123.59490240364603" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -123,7 +124,8 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/home/denisyeyson/Documentos/Portafolio_Astro_Matematica_GitHub_Pages/node_modules/typescript/lib"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -147,7 +149,7 @@
       <updated>1788277453324</updated>
       <workItem from="1788277454472" duration="943000" />
       <workItem from="1788279783507" duration="1163000" />
-      <workItem from="1788281081970" duration="815000" />
+      <workItem from="1788281081970" duration="3940000" />
     </task>
     <servers />
   </component>

@@ -116,7 +116,7 @@ try {
         printBackground: true,
         displayHeaderFooter: true,
         margin: { top: '18mm', right: '14mm', bottom: '18mm', left: '14mm' },
-        headerTemplate: '<div style="width:100%;font-size:8px;color:#64748b;text-align:center">Portafolio Académico de Matemática</div>',
+        headerTemplate: '<div style="width:100%;font-size:8px;color:#64748b;text-align:center">Portafolio Académico de Matemática II</div>',
         footerTemplate: '<div style="width:100%;font-size:8px;color:#64748b;text-align:center"><span class="pageNumber"></span> / <span class="totalPages"></span></div>',
       });
       generated += 1;

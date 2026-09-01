@@ -204,6 +204,10 @@ svg {
   gap: 7px;
 }
 
+.session-download {
+  margin-top: 24px;
+}
+
 .nav-link,
 .mobile-nav-link {
   padding: 9px 13px;
