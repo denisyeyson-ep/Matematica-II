@@ -13,6 +13,7 @@ const origin = 'http://127.0.0.1:4321';
 const distDirectory = fileURLToPath(new URL('../dist/', import.meta.url));
 const outputDirectory = fileURLToPath(new URL('../dist/pdfs/', import.meta.url));
 const limit = Number(process.env.PDF_LIMIT || 36);
+const graphScale = Number(process.env.PDF_GRAPH_SCALE || 2);
 
 await mkdir(outputDirectory, { recursive: true });
 
@@ -68,7 +69,10 @@ function pad(value) {
 let browser;
 try {
   browser = await chromium.launch({ headless: true });
-  const context = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
+  const context = await browser.newContext({
+    viewport: { width: 1440, height: 1000 },
+    deviceScaleFactor: graphScale,
+  });
   const page = await context.newPage();
   let generated = 0;
 
@@ -93,6 +97,7 @@ try {
           await page.waitForTimeout(1_500);
           const screenshot = await graph.screenshot({
             type: 'png',
+            scale: 'device',
             animations: 'disabled',
             timeout: 20_000,
           });
@@ -116,7 +121,7 @@ try {
         printBackground: true,
         displayHeaderFooter: true,
         margin: { top: '18mm', right: '14mm', bottom: '18mm', left: '14mm' },
-        headerTemplate: '<div style="width:100%;font-size:8px;color:#64748b;text-align:center">Portafolio Académico de Matemática II</div>',
+        headerTemplate: '<div style="width:100%;font-size:8px;color:#64748b;text-align:center">Portafolio Académico de Matemática</div>',
         footerTemplate: '<div style="width:100%;font-size:8px;color:#64748b;text-align:center"><span class="pageNumber"></span> / <span class="totalPages"></span></div>',
       });
       generated += 1;
