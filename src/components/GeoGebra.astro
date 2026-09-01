@@ -1,0 +1,59 @@
+---
+import { Download, ExternalLink, LineChart, Info } from '@lucide/astro';
+import { withBase } from '../lib/course';
+
+interface Props {
+  id?: string;
+  titulo?: string;
+  archivo?: string;
+}
+
+const { id = '', titulo = 'Gráfico interactivo de GeoGebra', archivo = '' } = Astro.props;
+const cleanId = id.trim();
+const downloadUrl = archivo && archivo.startsWith('/') ? withBase(archivo) : archivo;
+const materialUrl = 'https://www.geogebra.org/m/' + cleanId;
+const iframeUrl = 'https://www.geogebra.org/material/iframe/id/' + cleanId
+  + '/width/980/height/620/border/888888/sfsb/true/smb/false/stb/false'
+  + '/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false';
+---
+
+<section class="geogebra-card" aria-label={titulo} data-pagefind-ignore>
+  <div class="geogebra-topbar">
+    <div class="geogebra-title"><LineChart size={19} aria-hidden="true" /><span>Visualización interactiva</span></div>
+    <div class="geogebra-actions">
+      {archivo ? (
+        <a class="button button-soft button-small" href={downloadUrl} download>
+          <Download size={16} aria-hidden="true" /> Descargar .ggb
+        </a>
+      ) : (
+        <span class="button button-soft button-small button-disabled" title="Agrega el archivo .ggb en public/geogebra/">
+          <Download size={16} aria-hidden="true" /> Archivo pendiente
+        </span>
+      )}
+      {cleanId && (
+        <a class="button button-accent button-small" href={materialUrl} target="_blank" rel="noopener noreferrer">
+          <ExternalLink size={16} aria-hidden="true" /> Abrir GeoGebra
+        </a>
+      )}
+    </div>
+  </div>
+
+  {cleanId ? (
+    <div class="geogebra-frame">
+      <iframe
+        title={titulo}
+        src={iframeUrl}
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="strict-origin-when-cross-origin"
+      ></iframe>
+    </div>
+  ) : (
+    <div class="geogebra-placeholder">
+      <div class="geogebra-placeholder-icon"><LineChart size={34} aria-hidden="true" /></div>
+      <h4>Gráfico de GeoGebra pendiente</h4>
+      <p>Agrega el identificador del material al atributo <code>geogebraId</code> del ejercicio.</p>
+      <span><Info size={15} aria-hidden="true" /> Ejemplo: geogebraId="s6aev7zg"</span>
+    </div>
+  )}
+</section>

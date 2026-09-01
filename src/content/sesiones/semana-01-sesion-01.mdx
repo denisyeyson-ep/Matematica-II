@@ -1,0 +1,144 @@
+---
+title: "Plano cartesiano, distancia y punto medio"
+description: "Coordenadas cartesianas, distancia entre puntos y ubicación del punto medio de un segmento."
+week: 1
+session: 1
+date: 2026-08-10
+unit: 1
+tags:
+  - Plano cartesiano
+  - Distancia entre puntos
+  - Punto medio
+  - Geometría analítica
+published: true
+duration: "2 horas"
+difficulty: "Básico"
+exercises: 5
+---
+
+import Ejercicio from '../../components/Ejercicio.astro';
+
+## Teoría
+
+El **plano cartesiano** permite representar puntos mediante pares ordenados $(x,y)$. El primer valor corresponde al eje horizontal y el segundo, al eje vertical.
+
+### Distancia entre dos puntos
+
+Si conocemos $A(x_1,y_1)$ y $B(x_2,y_2)$, la distancia entre ambos es:
+
+$$
+d(A,B)=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}
+$$
+
+### Punto medio
+
+El punto medio $M$ divide el segmento $\overline{AB}$ en dos partes iguales:
+
+$$
+M=\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right)
+$$
+
+> **Idea clave:** primero identifica cada coordenada y después sustituye con cuidado los signos negativos.
+
+## Ejercicios resueltos
+
+<Ejercicio numero={1} titulo="Distancia entre los puntos A(2, 3) y B(5, 7)" geogebraId="s6aev7zg" dificultad="Básico">
+
+**Enunciado.** Determina la distancia entre $A(2,3)$ y $B(5,7)$.
+
+### Resolución
+
+Sustituimos las coordenadas en la fórmula:
+
+$$
+d=\sqrt{(5-2)^2+(7-3)^2}
+=\sqrt{3^2+4^2}
+=\sqrt{25}
+=5
+$$
+
+**Respuesta:** la distancia entre los puntos es de **5 unidades**.
+
+</Ejercicio>
+
+<Ejercicio numero={2} titulo="Punto medio del segmento AB" geogebraId="s6aev7zg" dificultad="Básico">
+
+**Enunciado.** Encuentra el punto medio del segmento cuyos extremos son $A(-2,4)$ y $B(6,8)$.
+
+### Resolución
+
+$$
+M=\left(\frac{-2+6}{2},\frac{4+8}{2}\right)
+=\left(\frac{4}{2},\frac{12}{2}\right)
+=(2,6)
+$$
+
+**Respuesta:** el punto medio es $M(2,6)$.
+
+</Ejercicio>
+
+<Ejercicio numero={3} titulo="Perímetro de un triángulo en el plano" geogebraId="s6aev7zg" dificultad="Intermedio">
+
+**Enunciado.** Calcula el perímetro del triángulo con vértices $A(0,0)$, $B(3,0)$ y $C(3,4)$.
+
+### Resolución
+
+Calculamos las longitudes de sus tres lados:
+
+$$
+AB=3,\qquad BC=4,\qquad AC=\sqrt{3^2+4^2}=5
+$$
+
+Por lo tanto:
+
+$$
+P=AB+BC+AC=3+4+5=12
+$$
+
+**Respuesta:** el perímetro del triángulo es de **12 unidades**.
+
+</Ejercicio>
+
+<Ejercicio numero={4} titulo="Coordenada desconocida usando el punto medio" geogebraId="s6aev7zg" dificultad="Intermedio">
+
+**Enunciado.** Si $A(1,2)$ y el punto medio es $M(4,5)$, determina las coordenadas de $B$.
+
+### Resolución
+
+Llamamos $B(x,y)$ y aplicamos la fórmula del punto medio:
+
+$$
+4=\frac{1+x}{2}
+\quad\Longrightarrow\quad
+x=7
+$$
+
+$$
+5=\frac{2+y}{2}
+\quad\Longrightarrow\quad
+y=8
+$$
+
+**Respuesta:** el punto faltante es $B(7,8)$.
+
+</Ejercicio>
+
+<Ejercicio numero={5} titulo="Verificación de un triángulo isósceles" geogebraId="s6aev7zg" dificultad="Intermedio">
+
+**Enunciado.** Demuestra que el triángulo con vértices $A(-2,0)$, $B(2,0)$ y $C(0,3)$ es isósceles.
+
+### Resolución
+
+$$
+AC=\sqrt{(0+2)^2+(3-0)^2}=\sqrt{13}
+$$
+
+$$
+BC=\sqrt{(0-2)^2+(3-0)^2}=\sqrt{13}
+$$
+
+Como $AC=BC$, el triángulo tiene dos lados iguales.
+
+**Respuesta:** el triángulo es **isósceles**.
+
+</Ejercicio>

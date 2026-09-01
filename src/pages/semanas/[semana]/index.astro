@@ -1,0 +1,56 @@
+---
+import { ArrowRight, BookOpen, CalendarDays, ChevronRight, Clock3, PencilRuler } from '@lucide/astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { portfolio } from '../../../config/portfolio';
+import { formatDate, getSessions, pad, sessionUrl, unitForWeek, weekUrl, withBase } from '../../../lib/course';
+
+export async function getStaticPaths() {
+  return Array.from({ length: portfolio.weeks }, (_, index) => ({
+    params: { semana: pad(index + 1) },
+    props: { week: index + 1 },
+  }));
+}
+
+const { week } = Astro.props;
+const sessions = (await getSessions()).filter((entry) => entry.data.week === week);
+const unit = unitForWeek(week);
+const previous = week > 1 ? week - 1 : null;
+const next = week < portfolio.weeks ? week + 1 : null;
+---
+
+<BaseLayout title={'Semana ' + pad(week) + ': ' + unit.title} description={'Sesiones y ejercicios de la semana ' + week + '.'}>
+  <section class="page-hero container" data-pagefind-body>
+    <nav class="breadcrumb" aria-label="Migas de pan">
+      <a href={withBase('/')}>Inicio</a><ChevronRight size={14} /><a href={withBase('/semanas/')}>Semanas</a><ChevronRight size={14} /><span>Semana {pad(week)}</span>
+    </nav>
+    <span class="eyebrow">Unidad {String(unit.number).padStart(2, '0')} · {unit.title}</span>
+    <h1 class="page-title">Semana {pad(week)}</h1>
+    <p class="page-description">Elige una de las dos sesiones para revisar la teoría y resolver sus cinco ejercicios.</p>
+  </section>
+
+  <section class="container section-block">
+    <div class="sessions-grid">
+      {sessions.map((entry) => (
+        <a class="session-card" href={sessionUrl(entry)}>
+          <div class="session-card-header">
+            <span class="eyebrow">Sesión {pad(entry.data.session)}</span>
+            <span class="status-badge">{entry.data.published ? 'Publicada' : 'Por completar'}</span>
+          </div>
+          <h3>{entry.data.title}</h3>
+          <p>{entry.data.description}</p>
+          <div class="tag-list">{entry.data.tags.slice(0, 3).map((tag) => <span class="tag">{tag}</span>)}</div>
+          <div class="session-meta">
+            <span><CalendarDays size={14} /> {formatDate(entry.data.date)}</span>
+            <span><Clock3 size={14} /> {entry.data.duration}</span>
+            <span><PencilRuler size={14} /> {entry.data.exercises} ejercicios</span>
+          </div>
+        </a>
+      ))}
+    </div>
+    <div class="hero-actions" style="margin-top:28px">
+      {previous && <a class="button button-soft" href={weekUrl(previous)}>← Semana {pad(previous)}</a>}
+      {next && <a class="button button-accent" href={weekUrl(next)}>Semana {pad(next)} <ArrowRight size={16} /></a>}
+      <a class="button button-soft" href={withBase('/semanas/')}><BookOpen size={16} /> Todas las semanas</a>
+    </div>
+  </section>
+</BaseLayout>

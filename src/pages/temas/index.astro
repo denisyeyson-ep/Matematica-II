@@ -1,0 +1,40 @@
+---
+import { ArrowUpRight, BookOpen } from '@lucide/astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSessions, pad, sessionUrl } from '../../lib/course';
+
+const sessions = await getSessions();
+const topicMap = new Map<string, typeof sessions>();
+for (const entry of sessions) {
+  for (const tag of entry.data.tags) {
+    const current = topicMap.get(tag) ?? [];
+    current.push(entry);
+    topicMap.set(tag, current);
+  }
+}
+const topics = Array.from(topicMap.entries()).sort(([left], [right]) => left.localeCompare(right, 'es'));
+---
+
+<BaseLayout title="Índice de temas matemáticos" description="Busca los conceptos matemáticos estudiados durante las 18 semanas.">
+  <section class="page-hero container" data-pagefind-body>
+    <span class="eyebrow">Índice conceptual</span>
+    <h1 class="page-title">Temas del curso</h1>
+    <p class="page-description">Encuentra rápidamente los conceptos desarrollados en las distintas sesiones del semestre.</p>
+  </section>
+  <section class="container section-block">
+    <div class="topic-grid">
+      {topics.map(([topic, entries]) => (
+        <article class="topic-card">
+          <BookOpen size={21} color="var(--accent)" aria-hidden="true" />
+          <h3>{topic}</h3>
+          <p>{entries.length} {entries.length === 1 ? 'sesión relacionada' : 'sesiones relacionadas'}</p>
+          <div class="tag-list">
+            {entries.slice(0, 4).map((entry) => (
+              <a class="tag" href={sessionUrl(entry)}>S{pad(entry.data.week)} · {pad(entry.data.session)} <ArrowUpRight size={12} /></a>
+            ))}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,33 @@
+---
+import { CheckCircle2, PencilRuler } from '@lucide/astro';
+import GeoGebra from './GeoGebra.astro';
+
+interface Props {
+  numero: number;
+  titulo: string;
+  geogebraId?: string;
+  archivo?: string;
+  dificultad?: 'Básico' | 'Intermedio' | 'Avanzado';
+}
+
+const {
+  numero,
+  titulo,
+  geogebraId = '',
+  archivo = '',
+  dificultad = 'Intermedio',
+} = Astro.props;
+---
+
+<article class="exercise-card" id={'ejercicio-' + numero} data-pagefind-body>
+  <header class="exercise-header">
+    <div class="exercise-number"><PencilRuler size={18} aria-hidden="true" /> {String(numero).padStart(2, '0')}</div>
+    <div class="exercise-heading">
+      <span>Ejercicio {String(numero).padStart(2, '0')}</span>
+      <h3>{titulo}</h3>
+    </div>
+    <span class="difficulty-badge"><CheckCircle2 size={14} aria-hidden="true" /> {dificultad}</span>
+  </header>
+  <div class="exercise-content"><slot /></div>
+  <GeoGebra id={geogebraId} titulo={'Ejercicio ' + numero + ': ' + titulo} archivo={archivo} />
+</article>

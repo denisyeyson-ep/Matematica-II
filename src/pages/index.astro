@@ -1,0 +1,94 @@
+---
+import { ArrowRight, BookOpen, CalendarDays, GraduationCap, Layers3, LineChart, UserRound } from '@lucide/astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import WeekCard from '../components/WeekCard.astro';
+import { portfolio } from '../config/portfolio';
+import { currentWeek, getSessions, withBase } from '../lib/course';
+
+const sessions = await getSessions();
+const complete = sessions.filter((entry) => entry.data.published).length;
+const percent = Math.round((complete / (portfolio.weeks * portfolio.sessionsPerWeek)) * 100);
+const featuredWeeks = Array.from({ length: 6 }, (_, index) => index + 1);
+const studentInitials = portfolio.student.split(' ').slice(0, 2).map((word) => word[0]).join('');
+---
+
+<BaseLayout>
+  <section class="hero container" data-pagefind-body>
+    <div class="hero-grid">
+      <div>
+        <span class="hero-kicker">{portfolio.universityShort} · Portafolio académico {portfolio.semester}</span>
+        <h1 class="hero-title">Aprender <span>matemática</span>, paso a paso.</h1>
+        <p class="hero-description">{portfolio.subtitle} Cada semana reúne conceptos, ejercicios resueltos y gráficos interactivos para entender las matemáticas visualmente.</p>
+        <div class="hero-meta">
+          <span><UserRound size={16} aria-hidden="true" /> {portfolio.student}</span>
+          <span><GraduationCap size={16} aria-hidden="true" /> {portfolio.career}</span>
+          <span><CalendarDays size={16} aria-hidden="true" /> Ciclo {portfolio.semester}</span>
+        </div>
+        <div class="hero-actions">
+          <a class="button button-accent" href={withBase('/semanas/')}>Explorar las semanas <ArrowRight size={17} aria-hidden="true" /></a>
+          <a class="button button-soft" href={withBase('/temas/')}><BookOpen size={17} aria-hidden="true" /> Ver todos los temas</a>
+        </div>
+      </div>
+
+      <aside class="profile-card" aria-label="Carátula académica">
+        <div class="profile-top">
+          <div class="profile-avatar">{studentInitials}</div>
+          <div>
+            <span class="profile-label">Estudiante</span>
+            <h2 class="profile-name">{portfolio.student}</h2>
+            <p class="profile-career">{portfolio.career}</p>
+          </div>
+        </div>
+        <div class="profile-details">
+          <div class="profile-detail"><span class="profile-label">Universidad</span><strong>{portfolio.universityShort}</strong></div>
+          <div class="profile-detail"><span class="profile-label">Curso</span><strong>{portfolio.course}</strong></div>
+          <div class="profile-detail"><span class="profile-label">Docente</span><strong>{portfolio.teacher}</strong></div>
+          <div class="profile-detail"><span class="profile-label">Sección</span><strong>{portfolio.section}</strong></div>
+          <div class="profile-detail"><span class="profile-label">Periodo</span><strong>{portfolio.semester}</strong></div>
+          <div class="profile-detail"><span class="profile-label">Semana actual</span><strong>{String(currentWeek()).padStart(2, '0')} de 18</strong></div>
+        </div>
+        <div class="profile-progress">
+          <div class="progress-top"><span>Avance del portafolio</span><strong>{percent}%</strong></div>
+          <div class="progress-bar" aria-label={'Avance: ' + percent + '%'}><span style={'width:' + Math.max(percent, 3) + '%'}></span></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="container stats-grid" aria-label="Resumen del curso">
+    <div class="stat-card"><span class="stat-label">Semanas académicas</span><strong class="stat-value">{portfolio.weeks}</strong></div>
+    <div class="stat-card"><span class="stat-label">Sesiones de clase</span><strong class="stat-value">{portfolio.weeks * portfolio.sessionsPerWeek}</strong></div>
+    <div class="stat-card"><span class="stat-label">Ejercicios previstos</span><strong class="stat-value">{portfolio.weeks * portfolio.sessionsPerWeek * portfolio.exercisesPerSession}</strong></div>
+    <div class="stat-card"><span class="stat-label">Sesiones completadas</span><strong class="stat-value">{String(complete).padStart(2, '0')}</strong></div>
+  </section>
+
+  <section class="container section-block">
+    <div class="section-header">
+      <div>
+        <span class="eyebrow">Ruta de aprendizaje</span>
+        <h2 class="section-title">Semanas del semestre</h2>
+        <p class="section-description">Explora la teoría, los ejercicios y sus gráficas interactivas.</p>
+      </div>
+      <a class="text-link" href={withBase('/semanas/')}>Ver las 18 semanas →</a>
+    </div>
+    <div class="weeks-grid">
+      {featuredWeeks.map((week) => (
+        <WeekCard week={week} sessions={sessions.filter((entry) => entry.data.week === week)} current={week === currentWeek()} />
+      ))}
+    </div>
+  </section>
+
+  <section class="container section-block">
+    <div class="section-header">
+      <div>
+        <span class="eyebrow">Metodología</span>
+        <h2 class="section-title">Una estructura para comprender</h2>
+      </div>
+    </div>
+    <div class="topic-grid">
+      <article class="topic-card"><BookOpen size={23} color="var(--accent)" aria-hidden="true" /><h3>Teoría clara</h3><p>Definiciones, propiedades, fórmulas y ejemplos escritos en Markdown y LaTeX.</p></article>
+      <article class="topic-card"><Layers3 size={23} color="var(--violet)" aria-hidden="true" /><h3>Resolución detallada</h3><p>Cinco ejercicios por sesión, desarrollados paso a paso para facilitar el estudio.</p></article>
+      <article class="topic-card"><LineChart size={23} color="var(--emerald)" aria-hidden="true" /><h3>Gráficos interactivos</h3><p>Construcciones de GeoGebra integradas, descargables y listas para explorar.</p></article>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,32 @@
+{
+  "name": "portafolio-academico-matematica",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0",
+    "start": "astro dev --host 0.0.0.0",
+    "build": "astro build && pagefind --site dist --glob '**/*.html'",
+    "preview": "astro preview --host 0.0.0.0",
+    "pdf:generate": "node scripts/generate-session-pdfs.mjs",
+    "astro": "astro",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^7.0.7",
+    "@lucide/astro": "^1.33.0",
+    "astro": "^7.2.4",
+    "katex": "^0.18.4",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0"
+  },
+  "devDependencies": {
+    "pagefind": "^1.5.2",
+    "playwright": "^1.55.0",
+    "typescript": "^5.9.3"
+  },
+  "type": "module",
+  "displayName": "Portafolio Acad\u00e9mico de Matem\u00e1tica"
+}

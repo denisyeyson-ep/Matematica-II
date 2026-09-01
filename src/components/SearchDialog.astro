@@ -1,0 +1,144 @@
+---
+import { Search, X, ArrowRight, Command } from '@lucide/astro';
+import { getSessions, searchRecords } from '../lib/course';
+
+const records = searchRecords(await getSessions());
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+<dialog class="search-dialog" id="site-search" data-pagefind-ignore>
+  <div class="search-dialog-panel">
+    <form method="dialog" class="search-topbar">
+      <Search size={21} aria-hidden="true" />
+      <input id="search-input" type="search" placeholder="Busca un tema, semana, sesión o ejercicio..." autocomplete="off" />
+      <button class="icon-button" aria-label="Cerrar buscador"><X size={20} aria-hidden="true" /></button>
+    </form>
+    <div class="search-results" id="search-results">
+      <div class="search-empty">
+        <Command size={29} aria-hidden="true" />
+        <p>Escribe, por ejemplo, <strong>mediatriz</strong>, <strong>semana 1</strong> o <strong>pendiente</strong>.</p>
+      </div>
+    </div>
+    <div class="search-footer"><ArrowRight size={15} aria-hidden="true" /> Selecciona un resultado para abrirlo</div>
+  </div>
+</dialog>
+<script type="application/json" id="search-records" data-base={baseUrl} set:html={JSON.stringify(records)} />
+
+<script>
+  interface SearchRecord {
+    title: string;
+    description: string;
+    week: number;
+    session: number;
+    tags: string[];
+    url: string;
+    published: boolean;
+  }
+
+  interface PagefindData {
+    url: string;
+    excerpt: string;
+    meta: { title?: string };
+  }
+
+  interface PagefindModule {
+    search: (query: string) => Promise<{ results: Array<{ data: () => Promise<PagefindData> }> }>;
+  }
+
+  function normalize(value: string): string {
+    return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  }
+
+  function setupSearch() {
+    const dialog = document.getElementById('site-search');
+    const input = document.getElementById('search-input');
+    const output = document.getElementById('search-results');
+    const source = document.getElementById('search-records');
+    if (!(dialog instanceof HTMLDialogElement) || !(input instanceof HTMLInputElement) || !(output instanceof HTMLElement) || !source || dialog.dataset.bound === 'true') return;
+    dialog.dataset.bound = 'true';
+    const records = JSON.parse(source.textContent || '[]') as SearchRecord[];
+    const baseUrl = source.dataset.base || '/';
+    let pagefindPromise: Promise<PagefindModule | null> | null = null;
+
+    function open() {
+      dialog.showModal();
+      input.focus();
+    }
+
+    function render() {
+      const query = normalize(input.value.trim());
+      if (!query) {
+        output.innerHTML = '<div class="search-empty"><p>Busca por tema, semana, sesión o palabra clave.</p></div>';
+        return;
+      }
+      const filtered = records.filter((record) => {
+        const haystack = normalize([
+          record.title,
+          record.description,
+          'semana ' + record.week,
+          'semana ' + String(record.week).padStart(2, '0'),
+          'sesion ' + record.session,
+          'ejercicio',
+          ...record.tags,
+        ].join(' '));
+        return query.split(/\s+/).every((part) => haystack.includes(part));
+      }).slice(0, 12);
+      if (!filtered.length) {
+        output.innerHTML = '<div class="search-empty"><p>No encontramos resultados para <strong>' + escapeHtml(input.value) + '</strong>.</p></div>';
+        void searchFullText(input.value.trim());
+        return;
+      }
+      output.innerHTML = filtered.map((record) =>
+        '<a class="search-result" href="' + record.url + '">' +
+          '<span class="search-result-week">S' + String(record.week).padStart(2, '0') + '</span>' +
+          '<span><strong>' + escapeHtml(record.title) + '</strong><small>Semana ' + String(record.week).padStart(2, '0') + ' · Sesión ' + String(record.session).padStart(2, '0') + (record.published ? '' : ' · Plantilla') + '</small></span>' +
+          '<span class="search-arrow">→</span>' +
+        '</a>',
+      ).join('');
+    }
+
+    async function searchFullText(request: string) {
+      if (!pagefindPromise) {
+        const modulePath = baseUrl.replace(/\/$/, '') + '/pagefind/pagefind.js';
+        pagefindPromise = import(/* @vite-ignore */ modulePath)
+          .then((module) => module as PagefindModule)
+          .catch(() => null);
+      }
+      const pagefind = await pagefindPromise;
+      if (!pagefind || normalize(input.value.trim()) !== normalize(request)) return;
+      const response = await pagefind.search(request);
+      const matches = await Promise.all(response.results.slice(0, 8).map((item) => item.data()));
+      if (!matches.length || normalize(input.value.trim()) !== normalize(request)) return;
+      output.innerHTML = matches.map((match) => {
+        const cleanExcerpt = match.excerpt.replace(/<[^>]*>/g, '').trim();
+        const resultUrl = baseUrl.replace(/\/$/, '') + '/' + match.url.replace(/^\//, '');
+        return '<a class="search-result" href="' + escapeHtml(resultUrl) + '">' +
+          '<span class="search-result-week">↗</span>' +
+          '<span><strong>' + escapeHtml(match.meta.title || 'Resultado del portafolio') + '</strong>' +
+          '<small>' + escapeHtml(cleanExcerpt.slice(0, 120)) + '</small></span>' +
+          '<span class="search-arrow">→</span></a>';
+      }).join('');
+    }
+
+    function escapeHtml(value: string): string {
+      const element = document.createElement('span');
+      element.textContent = value;
+      return element.innerHTML;
+    }
+
+    document.querySelectorAll('[data-search-open]').forEach((button) => button.addEventListener('click', open));
+    input.addEventListener('input', render);
+    document.addEventListener('keydown', (event) => {
+      if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') {
+        event.preventDefault();
+        if (dialog.open) dialog.close();
+        else open();
+      }
+    });
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+  }
+  setupSearch();
+  document.addEventListener('astro:page-load', setupSearch);
+</script>

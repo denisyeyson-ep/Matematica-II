@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import WeekCard from '../../components/WeekCard.astro';
+import { portfolio } from '../../config/portfolio';
+import { currentWeek, getSessions } from '../../lib/course';
+
+const sessions = await getSessions();
+---
+
+<BaseLayout title="Las 18 semanas del semestre" description="Ruta completa de aprendizaje organizada por unidades, semanas y sesiones.">
+  <section class="page-hero container" data-pagefind-body>
+    <span class="eyebrow">Calendario académico</span>
+    <h1 class="page-title">Las 18 semanas</h1>
+    <p class="page-description">Dos sesiones semanales, teoría, ejercicios resueltos y gráficos interactivos. Selecciona una semana para comenzar.</p>
+  </section>
+
+  <section class="container section-block">
+    {portfolio.units.map((unit) => {
+      const weeks = Array.from({ length: unit.end - unit.start + 1 }, (_, index) => unit.start + index);
+      return (
+        <section class="unit-panel" aria-label={unit.title}>
+          <div class="unit-heading">
+            <div>
+              <span class="unit-label">Unidad {String(unit.number).padStart(2, '0')}</span>
+              <h2>{unit.title}</h2>
+            </div>
+            <span class="unit-counter">{weeks.length} {weeks.length === 1 ? 'semana' : 'semanas'}</span>
+          </div>
+          <div class="weeks-grid">
+            {weeks.map((week) => (
+              <WeekCard week={week} sessions={sessions.filter((entry) => entry.data.week === week)} current={week === currentWeek()} />
+            ))}
+          </div>
+        </section>
+      );
+    })}
+  </section>
+</BaseLayout>

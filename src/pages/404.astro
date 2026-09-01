@@ -1,0 +1,14 @@
+---
+import { ArrowLeft } from '@lucide/astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../lib/course';
+---
+
+<BaseLayout title="Página no encontrada">
+  <section class="container empty-state">
+    <span class="eyebrow">Error 404</span>
+    <h1 class="page-title">Esa página no existe</h1>
+    <p class="page-description" style="margin-inline:auto">La semana, sesión o página que buscas no se encuentra en el portafolio.</p>
+    <a class="button button-accent" style="margin:25px auto" href={withBase('/')}><ArrowLeft size={17} /> Volver al inicio</a>
+  </section>
+</BaseLayout>

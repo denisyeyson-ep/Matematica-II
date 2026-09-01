@@ -1,0 +1,75 @@
+---
+import { render } from 'astro:content';
+import { ArrowLeft, ArrowRight, BookOpen, CalendarDays, ChevronRight, Clock3, Download, PencilRuler } from '@lucide/astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { formatDate, getSessions, pad, sessionUrl, unitForWeek, weekUrl, withBase } from '../../../lib/course';
+
+export async function getStaticPaths() {
+  const sessions = await getSessions();
+  return sessions.map((entry, index) => ({
+    params: {
+      semana: pad(entry.data.week),
+      sesion: 'sesion-' + pad(entry.data.session),
+    },
+    props: {
+      entry,
+      previous: index > 0 ? sessions[index - 1] : null,
+      next: index < sessions.length - 1 ? sessions[index + 1] : null,
+    },
+  }));
+}
+
+const { entry, previous, next } = Astro.props;
+const { Content } = await render(entry);
+const unit = unitForWeek(entry.data.week);
+const pdfName = `semana-${pad(entry.data.week)}-sesion-${pad(entry.data.session)}.pdf`;
+const pdfUrl = withBase('/pdfs/' + pdfName);
+---
+
+<BaseLayout title={entry.data.title} description={entry.data.description}>
+  <section class="page-hero container" data-pagefind-body>
+    <nav class="breadcrumb" aria-label="Migas de pan">
+      <a href={withBase('/')}>Inicio</a><ChevronRight size={14} />
+      <a href={withBase('/semanas/')}>Semanas</a><ChevronRight size={14} />
+      <a href={weekUrl(entry.data.week)}>Semana {pad(entry.data.week)}</a><ChevronRight size={14} />
+      <span>Sesión {pad(entry.data.session)}</span>
+    </nav>
+    <span class="eyebrow">Semana {pad(entry.data.week)} · Sesión {pad(entry.data.session)} · {unit.title}</span>
+    <h1 class="page-title" data-pagefind-meta="title">{entry.data.title}</h1>
+    <p class="page-description">{entry.data.description}</p>
+    <div class="session-meta" style="border:0;padding-top:0">
+      <span><CalendarDays size={15} /> {formatDate(entry.data.date)}</span>
+      <span><Clock3 size={15} /> {entry.data.duration}</span>
+      <span><PencilRuler size={15} /> {entry.data.exercises} ejercicios</span>
+      <span>{entry.data.difficulty}</span>
+    </div>
+    <div class="tag-list" style="margin-top:13px">{entry.data.tags.map((tag) => <span class="tag">{tag}</span>)}</div>
+    <div class="hero-actions session-download" data-pagefind-ignore>
+      <a class="button button-accent" href={pdfUrl} download={pdfName}>
+        <Download size={17} aria-hidden="true" /> Descargar sesión en PDF
+      </a>
+    </div>
+  </section>
+
+  <section class="container session-layout">
+    <aside class="content-sidebar" data-pagefind-ignore>
+      <p class="sidebar-title">En esta sesión</p>
+      <a class="sidebar-link" href="#teoría"><BookOpen size={15} /> Teoría y fórmulas</a>
+      <div class="sidebar-divider"></div>
+      <p class="sidebar-title">Ejercicios resueltos</p>
+      {Array.from({ length: entry.data.exercises }, (_, index) => (
+        <a class="sidebar-link" href={'#ejercicio-' + (index + 1)}><PencilRuler size={14} /> Ejercicio {pad(index + 1)}</a>
+      ))}
+      <div class="sidebar-divider"></div>
+      <a class="sidebar-link" href={weekUrl(entry.data.week)}><ArrowLeft size={15} /> Volver a la semana</a>
+    </aside>
+
+    <article class="session-content" data-pagefind-body>
+      <Content />
+      <div class="hero-actions" style="margin-top:34px">
+        {previous && <a class="button button-soft" href={sessionUrl(previous)}><ArrowLeft size={16} /> Sesión anterior</a>}
+        {next && <a class="button button-accent" href={sessionUrl(next)}>Siguiente sesión <ArrowRight size={16} /></a>}
+      </div>
+    </article>
+  </section>
+</BaseLayout>

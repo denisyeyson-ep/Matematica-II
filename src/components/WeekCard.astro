@@ -1,0 +1,30 @@
+---
+import { ArrowUpRight, CalendarDays, CheckCircle2, LockKeyhole } from '@lucide/astro';
+import { pad, unitForWeek, weekRange, weekUrl, type SessionEntry } from '../lib/course';
+
+interface Props {
+  week: number;
+  sessions: SessionEntry[];
+  current?: boolean;
+}
+
+const { week, sessions, current = false } = Astro.props;
+const unit = unitForWeek(week);
+const published = sessions.filter((entry) => entry.data.published).length;
+---
+
+<a class:list={['week-card', 'accent-' + unit.color, { 'week-card-current': current }]} href={weekUrl(week)}>
+  <div class="week-card-top">
+    <span class="week-index">SEMANA {pad(week)}</span>
+    {current ? <span class="current-badge">Actual</span> : <ArrowUpRight size={19} class="week-arrow" aria-hidden="true" />}
+  </div>
+  <h3>{unit.title}</h3>
+  <p>{sessions[0]?.data.title ?? 'Contenido por desarrollar'}</p>
+  <div class="week-card-footer">
+    <span><CalendarDays size={15} aria-hidden="true" /> {weekRange(week)}</span>
+    <span>
+      {published > 0 ? <CheckCircle2 size={15} aria-hidden="true" /> : <LockKeyhole size={15} aria-hidden="true" />}
+      {published}/2 sesiones
+    </span>
+  </div>
+</a>

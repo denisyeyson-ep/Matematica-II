@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0a8a9faf-a936-49f8-9e30-b144defe4efe" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="73" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;denisyeyson-ep&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/denisyeyson-ep/Repo-Matematica2.git&quot;,
+    &quot;accountId&quot;: &quot;14b75888-e10d-49c5-a299-3b897be6900a&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.6616450544691261" />
+      <entry key="MS500" value="2.550791273772435" />
+      <entry key="S2" value="2.8736027184882866" />
+      <entry key="S5" value="2.948184662402891" />
+      <entry key="S10" value="2.9738779103335267" />
+      <entry key="S30" value="3.0273821787976294" />
+      <entry key="S60" value="3.7706465252283583" />
+      <entry key="M2" value="6.616936671291287" />
+      <entry key="M5" value="12.148618869559614" />
+      <entry key="M10" value="15.469669555876683" />
+      <entry key="M15" value="16.8263907379063" />
+      <entry key="M30" value="18.33110389350679" />
+      <entry key="H1" value="19.143949938494497" />
+      <entry key="H2" value="19.566433350729174" />
+      <entry key="H4" value="19.781813226783093" />
+      <entry key="D1" value="19.96343906369186" />
+      <entry key="W1" value="19.994772177136745" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.5566523269014179" />
+      <entry key="MS500" value="2.5160116562114" />
+      <entry key="S2" value="2.863683188343992" />
+      <entry key="S5" value="2.944104065230295" />
+      <entry key="S10" value="2.971818198748312" />
+      <entry key="S30" value="3.02667879725667" />
+      <entry key="S60" value="3.7701584301711155" />
+      <entry key="M2" value="6.6164208317958" />
+      <entry key="M5" value="12.148196135657438" />
+      <entry key="M10" value="15.469392453722433" />
+      <entry key="M15" value="16.826188023970584" />
+      <entry key="M30" value="18.330992544375935" />
+      <entry key="H1" value="19.143891560622247" />
+      <entry key="H2" value="19.566403458682103" />
+      <entry key="H4" value="19.78179810146452" />
+      <entry key="D1" value="19.963436517599707" />
+      <entry key="W1" value="19.99477181278802" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3IjUQMIh3PNHDGcTbLJglf5snPR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "javascript.preferred.runtime.type.id": "node",
+    "last_opened_file_path": "/home/denisyeyson/Documentos/Portafolio_Astro_Matematica_GitHub_Pages/public/geogebra",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/geogebra" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-WS-262.8665.341" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0a8a9faf-a936-49f8-9e30-b144defe4efe" name="Changes" comment="" />
+      <created>1788277453324</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1788277453324</updated>
+      <workItem from="1788277454472" duration="943000" />
+      <workItem from="1788279783507" duration="525000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

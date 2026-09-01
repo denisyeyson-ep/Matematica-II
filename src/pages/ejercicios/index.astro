@@ -1,0 +1,27 @@
+---
+import { ArrowUpRight } from '@lucide/astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSessions, pad, sessionUrl } from '../../lib/course';
+
+const sessions = await getSessions();
+---
+
+<BaseLayout title="Directorio de ejercicios resueltos" description="Directorio de ejercicios matemáticos organizados por semana y sesión.">
+  <section class="page-hero container" data-pagefind-body>
+    <span class="eyebrow">Banco de práctica</span>
+    <h1 class="page-title">Ejercicios resueltos</h1>
+    <p class="page-description">Consulta los 180 ejercicios previstos para el semestre, clasificados por semana y sesión.</p>
+  </section>
+  <section class="container section-block">
+    <div class="exercise-directory">
+      {sessions.map((entry) => (
+        <a class="directory-row" href={sessionUrl(entry) + '#ejercicio-1'}>
+          <span class="directory-week">SEM. {pad(entry.data.week)}</span>
+          <span class="directory-title"><strong>{entry.data.title}</strong><small>Sesión {pad(entry.data.session)} · {entry.data.published ? 'Disponible' : 'Por completar'}</small></span>
+          <span class="directory-count">{entry.data.exercises} ejercicios</span>
+          <ArrowUpRight size={17} class="directory-arrow" />
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

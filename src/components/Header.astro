@@ -1,0 +1,77 @@
+---
+import { Menu, Search, X, GraduationCap } from '@lucide/astro';
+import { portfolio } from '../config/portfolio';
+import { withBase } from '../lib/course';
+import ThemeToggle from './ThemeToggle.astro';
+
+const pathname = Astro.url.pathname;
+const links = [
+  { label: 'Inicio', href: withBase('/') },
+  { label: 'Semanas', href: withBase('/semanas/') },
+  { label: 'Temas', href: withBase('/temas/') },
+  { label: 'Ejercicios', href: withBase('/ejercicios/') },
+];
+---
+
+<header class="site-header" data-pagefind-ignore>
+  <div class="container header-inner">
+    <a class="brand" href={withBase('/')} aria-label="Ir al inicio">
+      <span class="brand-mark"><GraduationCap size={23} aria-hidden="true" /></span>
+      <span class="brand-copy">
+        <strong>{portfolio.course}</strong>
+        <small>{portfolio.semester}</small>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      {links.map((link) => (
+        <a
+          class:list={['nav-link', { active: link.href === withBase('/') ? pathname === withBase('/') : pathname.startsWith(link.href) }]}
+          href={link.href}
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <div class="header-actions">
+      <button class="search-trigger" data-search-open aria-label="Abrir buscador">
+        <Search size={18} aria-hidden="true" />
+        <span>Buscar tema...</span>
+        <kbd>Ctrl K</kbd>
+      </button>
+      <ThemeToggle />
+      <button class="icon-button mobile-menu-button" data-menu-toggle aria-label="Abrir menú" aria-expanded="false">
+        <Menu class="menu-open-icon" size={21} aria-hidden="true" />
+        <X class="menu-close-icon" size={21} aria-hidden="true" />
+      </button>
+    </div>
+  </div>
+
+  <nav class="mobile-nav container" data-mobile-nav aria-label="Navegación móvil">
+    {links.map((link) => (
+      <a
+        class:list={['mobile-nav-link', { active: link.href === withBase('/') ? pathname === withBase('/') : pathname.startsWith(link.href) }]}
+        href={link.href}
+      >
+        {link.label}
+      </a>
+    ))}
+  </nav>
+</header>
+
+<script>
+  function setupMenu() {
+    const button = document.querySelector('[data-menu-toggle]');
+    const navigation = document.querySelector('[data-mobile-nav]');
+    if (!(button instanceof HTMLButtonElement) || !(navigation instanceof HTMLElement) || button.dataset.bound === 'true') return;
+    button.dataset.bound = 'true';
+    button.addEventListener('click', () => {
+      const open = button.getAttribute('aria-expanded') !== 'true';
+      button.setAttribute('aria-expanded', String(open));
+      navigation.classList.toggle('is-open', open);
+    });
+  }
+  setupMenu();
+  document.addEventListener('astro:page-load', setupMenu);
+</script>

@@ -1,0 +1,12 @@
+---
+import { portfolio } from '../config/portfolio';
+import { withBase } from '../lib/course';
+---
+
+<footer class="site-footer" data-pagefind-ignore>
+  <div class="container footer-inner">
+    <p><strong>{portfolio.student}</strong> · {portfolio.career}</p>
+    <p>{portfolio.course} · {portfolio.universityShort} · {portfolio.semester}</p>
+    <a href={withBase('/semanas/')}>Explorar las 18 semanas</a>
+  </div>
+</footer>

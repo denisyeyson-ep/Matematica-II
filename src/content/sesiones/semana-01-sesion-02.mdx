@@ -1,0 +1,187 @@
+---
+title: "Pendiente, ecuación de la recta y mediatriz"
+description: "Pendiente de una recta, formas de su ecuación, rectas perpendiculares y construcción de la mediatriz."
+week: 1
+session: 2
+date: 2026-08-13
+unit: 1
+tags:
+  - Pendiente
+  - Ecuación de la recta
+  - Mediatriz
+  - Rectas perpendiculares
+  - Geometría analítica
+published: true
+duration: "2 horas"
+difficulty: "Intermedio"
+exercises: 5
+---
+
+import Ejercicio from '../../components/Ejercicio.astro';
+
+## Teoría
+
+Una **recta** se caracteriza por una dirección constante. Su pendiente indica cuánto cambia la coordenada $y$ cuando cambia la coordenada $x$.
+
+### Pendiente de una recta
+
+$$
+m=\frac{y_2-y_1}{x_2-x_1}
+$$
+
+### Ecuación punto-pendiente
+
+Si conocemos un punto $P(x_1,y_1)$ y la pendiente $m$:
+
+$$
+y-y_1=m(x-x_1)
+$$
+
+### Rectas perpendiculares
+
+Dos rectas no verticales son perpendiculares cuando sus pendientes cumplen:
+
+$$
+m_1\cdot m_2=-1
+\qquad\Longrightarrow\qquad
+m_2=-\frac{1}{m_1}
+$$
+
+### ¿Qué es la mediatriz?
+
+La **mediatriz** de un segmento es la recta que:
+
+1. Pasa por el punto medio del segmento.
+2. Es perpendicular a dicho segmento.
+
+> **Importante:** no debe confundirse con la mediana de un triángulo. La mediana une un vértice con el punto medio del lado opuesto; la mediatriz corta perpendicularmente un segmento en su punto medio.
+
+## Ejercicios resueltos
+
+<Ejercicio numero={1} titulo="Pendiente de una recta dados dos puntos" geogebraId="s6aev7zg" dificultad="Básico">
+
+**Enunciado.** Halla la pendiente de la recta que pasa por $A(2,3)$ y $B(5,9)$.
+
+### Resolución
+
+$$
+m=\frac{9-3}{5-2}=\frac{6}{3}=2
+$$
+
+**Respuesta:** la pendiente es $m=2$.
+
+</Ejercicio>
+
+<Ejercicio numero={2} titulo="Ecuación de la recta en forma pendiente-intersección" geogebraId="s6aev7zg" dificultad="Básico">
+
+**Enunciado.** Determina la ecuación de la recta que pasa por $P(2,3)$ y tiene pendiente $m=2$.
+
+### Resolución
+
+Aplicamos la forma punto-pendiente:
+
+$$
+y-3=2(x-2)
+$$
+
+Desarrollamos y despejamos:
+
+$$
+y-3=2x-4
+\qquad\Longrightarrow\qquad
+y=2x-1
+$$
+
+**Respuesta:** la ecuación es $y=2x-1$.
+
+</Ejercicio>
+
+<Ejercicio numero={3} titulo="Ecuación de la mediatriz de un segmento" geogebraId="s6aev7zg" dificultad="Intermedio">
+
+**Enunciado.** Encuentra la mediatriz del segmento con extremos $A(0,0)$ y $B(4,2)$.
+
+### Resolución
+
+Primero calculamos el punto medio:
+
+$$
+M=\left(\frac{0+4}{2},\frac{0+2}{2}\right)=(2,1)
+$$
+
+La pendiente del segmento es:
+
+$$
+m_{AB}=\frac{2-0}{4-0}=\frac12
+$$
+
+Por perpendicularidad:
+
+$$
+m_{\perp}=-\frac{1}{1/2}=-2
+$$
+
+La ecuación de la mediatriz resulta:
+
+$$
+y-1=-2(x-2)
+\qquad\Longrightarrow\qquad
+y=-2x+5
+$$
+
+**Respuesta:** la mediatriz es $y=-2x+5$.
+
+</Ejercicio>
+
+<Ejercicio numero={4} titulo="Recta perpendicular que pasa por un punto" geogebraId="s6aev7zg" dificultad="Intermedio">
+
+**Enunciado.** Determina la recta perpendicular a $y=3x-2$ que pasa por $P(6,1)$.
+
+### Resolución
+
+La recta dada tiene pendiente $m_1=3$. Por lo tanto:
+
+$$
+m_2=-\frac{1}{3}
+$$
+
+Usamos el punto $P(6,1)$:
+
+$$
+y-1=-\frac13(x-6)
+$$
+
+$$
+y=-\frac{x}{3}+3
+$$
+
+**Respuesta:** la recta buscada es $y=-\frac{x}{3}+3$.
+
+</Ejercicio>
+
+<Ejercicio numero={5} titulo="Intersección entre dos rectas" geogebraId="s6aev7zg" dificultad="Intermedio">
+
+**Enunciado.** Encuentra el punto de intersección de $y=2x-1$ y $y=-x+5$.
+
+### Resolución
+
+Igualamos ambas expresiones:
+
+$$
+2x-1=-x+5
+$$
+
+$$
+3x=6
+\qquad\Longrightarrow\qquad
+x=2
+$$
+
+Reemplazamos en cualquiera de las rectas:
+
+$$
+y=2(2)-1=3
+$$
+
+**Respuesta:** las rectas se intersecan en $P(2,3)$.
+
+</Ejercicio>
