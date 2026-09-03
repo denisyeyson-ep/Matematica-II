@@ -33,83 +33,531 @@ $$
 
 ## Ejercicios resueltos
 
-<Ejercicio numero={1} titulo="Escribe el título del ejercicio 1" geogebraId="" dificultad="Intermedio">
+<Ejercicio numero={1} titulo="Hallar los valores de k" geogebraId="jdbe3mdj" archivo="/geogebra/semana-03/sesion-02/jdbe3mdj.ggb" dificultad="Intermedio">
 
-**Enunciado.** Escribe aquí el problema planteado por el docente.
+**Enunciado:**
+
+    Determine los valores de $k$ para que la recta $L:kx+y+k-15=0$ sea tangente a la circunferencia $C:x^2+y^2+6x-8y-1=0$.
 
 ### Resolución
 
-Explica el procedimiento paso a paso:
+    ### Paso 1: Obtener el centro y el radio de la circunferencia
 
-$$
-x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
-$$
+    Dada la ecuación general de la circunferencia:
+    $$
+    C: x^2 + y^2 + 6x - 8y - 1 = 0
+    $$
 
-**Respuesta:** escribe aquí el resultado final.
+    Agrupamos los términos para completar los cuadrados tanto en $x$ como en $y$:
+    $$
+    (x^2 + 6x) + (y^2 - 8y) = 1
+    $$
+
+    Sumamos los valores necesarios a ambos lados de la ecuación:
+
+    $$
+    \begin{gather*}
+    (x^2 + 6x + 9) + (y^2 - 8y + 16) = 1 + 9 + 16\\[10pt]
+    (x + 3)^2 + (y - 4)^2 = 26
+    \end{gather*}
+    $$
+
+    De la ecuación ordinaria $(x - h)^2 + (y - k)^2 = r^2$, identificamos:
+    $$
+    \begin{gather*}
+    \textbf{Centro:} \, O(-3, 4) \\
+    \textbf{Radio:} \, r = \sqrt{26}
+    \end{gather*}
+    $$
+
+    ### Paso 2: Aplicar la condición de tangencia
+
+    Para que la recta $L: kx + y + (k - 15) = 0$ sea tangente a la circunferencia, la distancia desde el centro $O(-3, 4)$ a la recta debe ser igual al radio $r = \sqrt{26}$.
+
+    La fórmula de la distancia de un punto $(x_0, y_0)$ a la recta $Ax + By + C = 0$ es:
+    $$
+    d = \frac{|A x_0 + B y_0 + C|}{\sqrt{\rule{0pt}{0.92em} A^2 + B^2}}
+    $$
+
+    Sustituyendo $A = k$, $B = 1$, $C = k - 15$ y el centro $(x_0, y_0) = (-3, 4)$:
+    $$
+    \frac{|k(-3) + 1(4) + k - 15|}{\sqrt{\rule{0pt}{0.92em} k^2 + 1^2}} = \sqrt{26}
+    $$
+
+    Simplificamos el numerador:
+    $$
+    \begin{gather*}
+    \frac{|-3k + 4 + k - 15|}{\sqrt{\rule{0pt}{0.92em} k^2 + 1}} = \sqrt{26}\\[15pt]
+    \frac{|-2k - 11|}{\sqrt{\rule{0pt}{0.92em} k^2 + 1}} = \sqrt{26}
+    \end{gather*}
+    $$
+
+    ### Paso 3: Resolver la ecuación para $k$
+
+    Multiplicamos ambos lados por $\sqrt{\rule{0pt}{0.92em} k^2 + 1}$:
+    $$
+    |-2k - 11| = \sqrt{26} \cdot \sqrt{\rule{0pt}{0.92em} k^2 + 1}
+    $$
+
+    Elevamos ambos lados al cuadrado para eliminar el valor absoluto y las raíces:
+    $$
+    (-2k - 11)^2 = 26(k^2 + 1)
+    $$
+
+    Desarrollamos el binomio al cuadrado y el lado derecho:
+    $$
+    4k^2 + 44k + 121 = 26k^2 + 26
+    $$
+
+    Reordenamos todos los términos hacia un solo lado para formar la ecuación cuadrática $ax^2 + bx + c = 0$:
+    $$
+    0 = 22k^2 - 44k - 95
+    $$
+
+    ### Paso 4: Calcular los valores de $k$
+
+    Aplicamos la fórmula general cuadrática $k = \frac{-b \pm \sqrt{\rule{0pt}{0.92em}b^2 - 4ac}}{\rule{0pt}{0.92em}2a}$ con $a = 22$, $b = -44$ y $c = -95$:
+    $$
+    \begin{gather*}
+    k = \frac{-(-44) \pm \sqrt{\rule{0pt}{0.92em}(-44)^2 - 4(22)(-95)}}{2(22)}\\[10pt]
+    k = \frac{44 \pm \sqrt{1936 + 8360}}{44}\\[10pt]
+    k = \frac{44 \pm \sqrt{10296}}{44}
+    \end{gather*}
+    $$
+
+    Simplificamos el radical ($\sqrt{10296} = \sqrt{36 \times 286} = 6\sqrt{286}$):
+    $$
+    k = \frac{44 \pm 6\sqrt{286}}{44}
+    $$
+
+    Dividimos cada término entre 2 para simplificar la fracción:
+    $$
+    k = \frac{22 \pm 3\sqrt{286}}{22}
+    $$
+
+    Por lo tanto, los valores de $k$ para que la recta sea tangente a la circunferencia son:
+    $$
+    k_1 = \frac{22 + 3\sqrt{286}}{22} \quad \text{y} \quad k_2 = \frac{22 - 3\sqrt{286}}{22}
+    $$
+
+**Respuesta:** Los valores de $k$ son $3,306$ y $-1,306$.
 
 </Ejercicio>
 
-<Ejercicio numero={2} titulo="Escribe el título del ejercicio 2" geogebraId="" dificultad="Intermedio">
+<Ejercicio numero={2} titulo="Ecuación general de la circunferencia" geogebraId="q77sjamd" archivo="/geogebra/semana-03/sesion-02/q77sjamd.ggb" dificultad="Intermedio">
 
-**Enunciado.** Escribe aquí el problema planteado por el docente.
+**Enunciado:**
+
+    Hallar la ecuación general de la circunferencia que tiene como diámetro la porción de la recta $L:2x-3y+12=0$, comprendida en el segundo cuadrante.
 
 ### Resolución
+    ### Paso 1: Determinar las intercepciones de la recta con los ejes coordenados
 
-Explica el procedimiento paso a paso:
+    Dada la ecuación de la recta $L: 2x - 3y + 12 = 0$, hallamos sus puntos de corte con los ejes cartesianos para definir el segmento en el segundo cuadrante.
 
-$$
-x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
-$$
+    * **Corte con el eje $X$ ($y = 0$):**
+    $$
+    2x - 3(0) + 12 = 0 \implies 2x = -12 \implies x = -6
+    $$
+    El punto de intersección es $A(-6, 0)$.
 
-**Respuesta:** escribe aquí el resultado final.
+    * **Corte con el eje $Y$ ($x = 0$):**
+    $$
+    2(0) - 3y + 12 = 0 \implies -3y = -12 \implies y = 4
+    $$
+    El punto de intersección es $B(0, 4)$.
+
+    La porción de la recta comprendida en el segundo cuadrante es el segmento $AB$ con extremos $A(-6, 0)$ y $B(0, 4)$, el cual representa el **diámetro** de la circunferencia.
+
+    ### Paso 2: Calcular el centro de la circunferencia
+
+    El centro $C(h, k)$ de la circunferencia es el punto medio del diámetro $AB$:
+    $$
+    h = \frac{x_1 + x_2}{2}, \quad k = \frac{y_1 + y_2}{2}
+    $$
+
+    Sustituyendo las coordenadas de $A(-6, 0)$ y $B(0, 4)$:
+    $$
+    \begin{gather*}
+    h = \frac{-6 + 0}{2} = -3 \quad \text{y} \quad  k = \frac{0 + 4}{2} = 2
+    \end{gather*}
+    $$
+
+    Por lo tanto, el centro es $C(-3, 2)$.
+
+    ### Paso 3: Calcular el radio de la circunferencia
+
+    El radio $r$ es la distancia desde el centro $C(-3, 2)$ a cualquiera de los extremos, por ejemplo $B(0, 4)$:
+    $$
+    r = \sqrt{\rule{0pt}{0.92em}(x_2 - x_1)^2 + (y_2 - y_1)^2}
+    $$
+
+    Sustituyendo los puntos:
+    $$
+    \begin{gather*}
+    r = \sqrt{\rule{0pt}{0.92em}(0 - (-3))^2 + (4 - 2)^2}\\[10pt]
+    r = \sqrt{\rule{0pt}{0.92em}(3)^2 + (2)^2}\\[10pt]
+    r = \sqrt{9 + 4}\\[10pt]
+    r = \sqrt{13}
+    \end{gather*}
+    $$
+
+    De donde el radio al cuadrado es $r^2 = 13$.
+
+    Identificamos los elementos principales:
+    $$
+    \begin{gather*}
+    \textbf{Centro:} \, C(-3, 2) \\
+    \textbf{Radio:} \, r = \sqrt{13}
+    \end{gather*}
+    $$
+
+    ### Paso 4: Obtener la ecuación general de la circunferencia
+
+    Sustituimos el centro $C(-3, 2)$ y $r^2 = 13$ en la ecuación ordinaria $(x - h)^2 + (y - k)^2 = r^2$:
+    $$
+    (x - (-3))^2 + (y - 2)^2 = 13
+    $$
+    $$
+    (x + 3)^2 + (y - 2)^2 = 13
+    $$
+
+    Desarrollamos los binomios al cuadrado:
+    $$
+    (x^2 + 6x + 9) + (y^2 - 4y + 4) = 13
+    $$
+
+    Ordenamos e igualamos a cero para obtener la forma general $x^2 + y^2 + Dx + Ey + F = 0$:
+    $$
+    \begin{gather*}
+    x^2 + y^2 + 6x - 4y + 9 + 4 - 13 = 0\\[10pt]
+    x^2 + y^2 + 6x - 4y = 0
+    \end{gather*}
+    $$
+
+    **Respuesta:** La ecuación general de la circunferencia es $x^2 + y^2 + 6x - 4y = 0$.
 
 </Ejercicio>
 
-<Ejercicio numero={3} titulo="Escribe el título del ejercicio 3" geogebraId="" dificultad="Intermedio">
+<Ejercicio numero={3} titulo="Ecuación general de la circunferencia" geogebraId="nrdubg3h" archivo="/geogebra/semana-03/sesion-02/nrdubg3h.ggb" dificultad="Intermedio">
 
-**Enunciado.** Escribe aquí el problema planteado por el docente.
+**Enunciado:**
+
+    Hallar la ecuación general de la circunferencia que es tangente al eje $X$ en $S(4,0)$ y pasa por el punto $T(7,1)$.
 
 ### Resolución
 
-Explica el procedimiento paso a paso:
+    ### Paso 1: Determinar el centro de la circunferencia a partir de la tangencia
 
-$$
-x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
-$$
+    Dado que la circunferencia es tangente al eje $X$ en el punto $S(4,0)$, la recta perpendicular al eje $X$ que pasa por $S$ debe contener al centro $C(h, k)$.
 
-**Respuesta:** escribe aquí el resultado final.
+    Por lo tanto, la abscisa del centro es fija:
+    $$
+    h = 4
+    $$
+
+    Además, como la circunferencia descansa sobre el eje $X$, el radio $r$ es igual al valor absoluto de la ordenada del centro:
+    $$
+    r = |k|
+    $$
+
+    Así, el centro tiene la forma $C(4, k)$ y el radio satisface $r^2 = k^2$.
+
+    ### Paso 2: Plantear la ecuación con el punto $T(7,1)$
+
+    La ecuación ordinaria de la circunferencia con centro $C(4, k)$ y radio $r$ es:
+    $$
+    (x - 4)^2 + (y - k)^2 = r^2
+    $$
+
+    Dado que $r^2 = k^2$, sustituimos:
+    $$
+    (x - 4)^2 + (y - k)^2 = k^2
+    $$
+
+    Como la circunferencia pasa por el punto $T(7,1)$, sustituimos $x = 7$ e $y = 1$ en la ecuación:
+    $$
+    (7 - 4)^2 + (1 - k)^2 = k^2
+    $$
+
+    ### Paso 3: Resolver la ecuación para hallar $k$
+
+    Desarrollamos la expresión algebraica:
+    $$
+    \begin{gather*}
+    (3)^2 + (1 - 2k + k^2) = k^2\\[10pt]
+    9 + 1 - 2k + k^2 = k^2
+    \end{gather*}
+    $$
+
+    Cancelamos $k^2$ en ambos lados y simplificamos:
+    $$
+    \begin{gather*}
+    10 - 2k = 0\\[10pt]
+    2k = 10\\[10pt]
+    k = 5
+    \end{gather*}
+    $$
+
+    De esta forma obtenemos los parámetros principales de la circunferencia:
+    $$
+    \begin{gather*}
+    \textbf{Centro:} \, C(4, 5) \\
+    \textbf{Radio:} \, r = 5
+    \end{gather*}
+    $$
+
+    ### Paso 4: Obtener la ecuación general de la circunferencia
+
+    Sustituimos $h = 4$, $k = 5$ y $r^2 = 25$ en la ecuación ordinaria $(x - h)^2 + (y - k)^2 = r^2$:
+    $$
+    (x - 4)^2 + (y - 5)^2 = 25
+    $$
+
+    Desarrollamos los binomios al cuadrado:
+    $$
+    (x^2 - 8x + 16) + (y^2 - 10y + 25) = 25
+    $$
+
+    Ordenamos e igualamos a cero para obtener la forma general $x^2 + y^2 + Dx + Ey + F = 0$:
+    $$
+    \begin{gather*}
+    x^2 + y^2 - 8x - 10y + 16 + 25 - 25 = 0\\[10pt]
+    x^2 + y^2 - 8x - 10y + 16 = 0
+    \end{gather*}
+    $$
+
+    **Respuesta:** La ecuación general de la circunferencia es $x^2 + y^2 - 8x - 10y + 16 = 0$.
 
 </Ejercicio>
 
-<Ejercicio numero={4} titulo="Escribe el título del ejercicio 4" geogebraId="" dificultad="Intermedio">
+<Ejercicio numero={4} titulo="Hallar la ecuación ordinaria" geogebraId="egzqadjk" archivo="/geogebra/semana-03/sesion-02/egzqadjk.ggb" dificultad="Intermedio">
 
-**Enunciado.** Escribe aquí el problema planteado por el docente.
+**Enunciado:**
+
+    Una circunferencia pasa por los puntos $A(-3,3)$ y $B(1,4)$, su centro está sobre la recta $L: 3x-2y-23=0$. Hallar su ecuación ordinaria.
 
 ### Resolución
 
-Explica el procedimiento paso a paso:
+    ### Paso 1: Determinar la recta mediatriz del segmento $AB$
 
-$$
-x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
-$$
+    El centro $C(h, k)$ de toda circunferencia que pasa por dos puntos $A$ y $B$ debe situarse sobre la mediatriz del segmento $AB$.
 
-**Respuesta:** escribe aquí el resultado final.
+    * **Punto medio $M$ de $AB$:**
+    $$
+    M = \left(\frac{-3 + 1}{2}, \frac{3 + 4}{2}\right) = \left(-1, \frac{7}{2}\right)
+    $$
+
+    * **Pendiente $m_{AB}$ del segmento $AB$:**
+    $$
+    m_{AB} = \frac{4 - 3}{1 - (-3)} = \frac{1}{4}
+    $$
+
+    * **Pendiente $m_\perp$ de la mediatriz:**
+    Como es perpendicular a $AB$, $m_\perp = -\frac{1}{m_{AB}} = -4$.
+
+    * **Ecuación de la recta mediatriz:**
+    Utilizando la forma punto-pendiente con $M\left(-1, \frac{7}{2}\right)$ y $m_\perp = -4$:
+    $$
+    y - \frac{7}{2} = -4(x - (-1))
+    $$
+    $$
+    \begin{gather*}
+    y - \frac{7}{2} = -4x - 4\\[10pt]
+    4x + y = -4 + \frac{7}{2}\\[10pt]
+    4x + y = -\frac{1}{2}\\[10pt]
+    8x + 2y = -1
+    \end{gather*}
+    $$
+
+    ### Paso 2: Calcular las coordenadas del centro $C(h, k)$
+
+    El centro $C(h, k)$ es la intersección entre la recta dada $L: 3x - 2y = 23$ y la mediatriz de $AB: 8x + 2y = -1$.
+
+    Planteamos el sistema de ecuaciones para $(h, k)$:
+    $$
+    \begin{cases}
+    3h - 2k = 23 \\
+    8h + 2k = -1
+    \end{cases}
+    $$
+
+    Sumamos ambas ecuaciones para eliminar la variable $k$:
+    $$
+    \begin{gather*}
+    (3h - 2k) + (8h + 2k) = 23 + (-1)\\[10pt]
+    11h = 22\\[10pt]
+    h = 2
+    \end{gather*}
+    $$
+
+    Sustituimos $h = 2$ en la segunda ecuación para hallar $k$:
+    $$
+    \begin{gather*}
+    8(2) + 2k = -1\\[10pt]
+    16 + 2k = -1\\[10pt]
+    2k = -17\\[10pt]
+    k = -\frac{17}{2}
+    \end{gather*}
+    $$
+
+    Por lo tanto, el centro es $C\left(2, -\frac{17}{2}\right)$.
+
+    ### Paso 3: Calcular el radio $r$ de la circunferencia
+
+    El radio $r$ es la distancia desde el centro $C\left(2, -\frac{17}{2}\right)$ al punto $B(1, 4)$:
+    $$
+    r^2 = (x_2 - x_1)^2 + (y_2 - y_1)^2
+    $$
+
+    Sustituyendo las coordenadas:
+    $$
+    \begin{gather*}
+    r^2 = (1 - 2)^2 + \left(4 - \left(-\frac{17}{2}\right)\right)^2\\[10pt]
+    r^2 = (-1)^2 + \left(4 + \frac{17}{2}\right)^2\\[10pt]
+    r^2 = 1 + \left(\frac{25}{2}\right)^2\\[10pt]
+    r^2 = 1 + \frac{625}{4}\\[10pt]
+    r^2 = \frac{629}{4}
+    \end{gather*}
+    $$
+
+    Identificamos los parámetros de la circunferencia:
+    $$
+    \begin{gather*}
+    \textbf{Centro:} \, C\left(2, -\frac{17}{2}\right) \\
+    \textbf{Radio al cuadrado:} \, r^2 = \frac{629}{4}
+    \end{gather*}
+    $$
+
+    ### Paso 4: Escribir la ecuación ordinaria
+
+    Sustituimos el centro $C\left(2, -\frac{17}{2}\right)$ y $r^2 = \frac{629}{4}$ en la ecuación ordinaria $(x - h)^2 + (y - k)^2 = r^2$:
+
+    $$
+    (x - 2)^2 + \left(y - \left(-\frac{17}{2}\right)\right)^2 = \frac{629}{4}
+    $$
+
+    $$
+    (x - 2)^2 + \left(y + \frac{17}{2}\right)^2 = \frac{629}{4}
+    $$
+
+    **Respuesta:** La ecuación ordinaria de la circunferencia es $(x - 2)^2 + \left(y + \frac{17}{2}\right)^2 = \frac{629}{4}$.
 
 </Ejercicio>
 
-<Ejercicio numero={5} titulo="Escribe el título del ejercicio 5" geogebraId="" dificultad="Intermedio">
+<Ejercicio numero={5} titulo="Hallar la ecuacion ordinaria" geogebraId="wewtk8jv" archivo="/geogebra/semana-03/sesion-02/wewtk8jv.ggb" dificultad="Intermedio">
 
-**Enunciado.** Escribe aquí el problema planteado por el docente.
+**Enunciado:**
+
+    Hallar la ecuacion ordinaria de la circunferencia que pasa por el punto $A(7,-5)$ y es tangente a la recta $L: x-y-4=0$ en el punto $B(3,-1)$.
 
 ### Resolución
 
-Explica el procedimiento paso a paso:
+    ### Paso 1: Determinar la recta perpendicular a $L$ que pasa por $B$
 
-$$
-x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
-$$
+    Dado que la circunferencia es tangente a la recta $L: x - y - 4 = 0$ en el punto $B(3, -1)$, el centro $C(h, k)$ debe estar sobre la recta perpendicular a $L$ que pasa por el punto de tangencia $B$.
 
-**Respuesta:** escribe aquí el resultado final.
+    * **Pendiente de la recta $L$ ($m_L$):**
+    De la ecuación $x - y - 4 = 0 \implies y = x - 4$, la pendiente es $m_L = 1$.
 
+    * **Pendiente de la recta perpendicular ($m_\perp$):**
+    $$
+    m_\perp = -\frac{1}{m_L} = -1
+    $$
+
+    * **Ecuación de la recta normal a $L$ en $B(3, -1)$:**
+    $$
+    y - (-1) = -1(x - 3)
+    $$
+    $$
+    \begin{gather*}
+    y + 1 = -x + 3\\[10pt]
+    x + y = 2 \quad \implies \quad y = 2 - x
+    \end{gather*}
+    $$
+
+    Por lo tanto, las coordenadas del centro $C(h, k)$ deben cumplir la condición:
+    $$
+    k = 2 - h \quad \implies \quad C(h, 2 - h)
+    $$
+
+    ### Paso 2: Aplicar la condición de igual distancia a los puntos $A$ y $B$
+
+    Dado que los puntos $A(7, -5)$ y $B(3, -1)$ pertenecen a la circunferencia, la distancia desde el centro $C(h, k)$ a cada uno de ellos debe ser igual al radio $r$, es decir, $d(C, A)^2 = d(C, B)^2$:
+
+    $$
+    (h - 7)^2 + (k - (-5))^2 = (h - 3)^2 + (k - (-1))^2
+    $$
+    $$
+    (h - 7)^2 + (k + 5)^2 = (h - 3)^2 + (k + 1)^2
+    $$
+
+    Sustituimos $k = 2 - h$ en la ecuación:
+    $$
+    (h - 7)^2 + ((2 - h) + 5)^2 = (h - 3)^2 + ((2 - h) + 1)^2
+    $$
+    $$
+    (h - 7)^2 + (7 - h)^2 = (h - 3)^2 + (3 - h)^2
+    $$
+
+    Como $(7 - h)^2 = (h - 7)^2$ y $(3 - h)^2 = (h - 3)^2$, simplificamos:
+    $$
+    2(h - 7)^2 = 2(h - 3)^2
+    $$
+    $$
+    (h - 7)^2 = (h - 3)^2
+    $$
+
+
+    ### Paso 3: Resolver la ecuación para hallar el centro y el radio
+
+    Desarrollamos los binomios al cuadrado:
+    $$
+    \begin{gather*}
+    h^2 - 14h + 49 = h^2 - 6h + 9\\[10pt]
+    -14h + 49 = -6h + 9\\[10pt]
+    8h = 40\\[10pt]
+    h = 5
+    \end{gather*}
+    $$
+
+    Sustituimos $h = 5$ para hallar la ordenada $k$:
+    $$
+    k = 2 - 5 = -3
+    $$
+
+    El centro de la circunferencia es $C(5, -3)$.
+
+    Ahora calculamos el radio al cuadrado $r^2$ usando la distancia al punto $B(3, -1)$:
+    $$
+    \begin{gather*}
+    r^2 = (3 - 5)^2 + (-1 - (-3))^2\\[10pt]
+    r^2 = (-2)^2 + (2)^2\\[10pt]
+    r^2 = 4 + 4\\[10pt]
+    r^2 = 8
+    \end{gather*}
+    $$
+
+    Identificamos los parámetros principales:
+    $$
+    \begin{gather*}
+    \textbf{Centro:} \, C(5, -3) \\
+    \textbf{Radio al cuadrado:} \, r^2 = 8
+    \end{gather*}
+    $$
+
+    ### Paso 4: Obtener la ecuación ordinaria
+
+    Sustituimos el centro $C(5, -3)$ y $r^2 = 8$ en la ecuación ordinaria $(x - h)^2 + (y - k)^2 = r^2$:
+
+    $$
+    (x - 5)^2 + (y - (-3))^2 = 8
+    $$
+
+    $$
+    (x - 5)^2 + (y + 3)^2 = 8
+    $$
+
+    **Respuesta:** La ecuación ordinaria de la circunferencia es $(x - 5)^2 + (y + 3)^2 = 8$.
 </Ejercicio>
 
