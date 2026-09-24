@@ -157,7 +157,7 @@
       <workItem from="1788395741345" duration="57000" />
       <workItem from="1788396478792" duration="2130000" />
       <workItem from="1788400978609" duration="1410000" />
-      <workItem from="1790280504663" duration="3669000" />
+      <workItem from="1790280504663" duration="4554000" />
     </task>
     <task id="LOCAL-00001" summary="Se agrego la parte teorica sem03.02">
       <option name="closed" value="true" />
@@ -175,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1790282936931</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Se agrego la resolucion de la Practica calificada 1">
+      <option name="closed" value="true" />
+      <created>1790284337124</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1790284337124</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
