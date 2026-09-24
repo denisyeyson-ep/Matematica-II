@@ -25,13 +25,50 @@ import Ejercicio from '../../components/Ejercicio.astro';
 
 ### Resolución
 
-Explica el procedimiento paso a paso:
+    ### Paso 1: Hallar la pendiente de la recta $L$
 
-$$
-x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
-$$
+    Dada la recta $L: 3x - 4y + 12 = 0$, despejamos $y$ para encontrar su pendiente $m_1$:
 
-**Respuesta:** escribe aquí el resultado final.
+    $$
+    \begin{gather*}
+    4y = 3x + 12\\[15pt]
+    y = \frac{3}{4}x + 3
+    \end{gather*}
+    $$
+
+    Por lo tanto, la pendiente es $m_1 = \displaystyle\frac{3}{4}$.
+
+    ### Paso 2: Determinar la pendiente de la recta perpendicular $L_\perp$
+
+    Dado que la recta buscada es perpendicular a $L$, sus pendientes cumplen la condición $m_1 \cdot m_2 = -1$:
+
+    $$
+    \begin{gather*}
+    \frac{3}{4} \cdot m_2 = -1\\[15pt]
+    m_2 = -\frac{4}{3}
+    \end{gather*}
+    $$
+
+    ### Paso 3: Encontrar la ecuación de la recta $L_\perp$
+
+    Usamos la fórmula punto-pendiente con $P = (5, -2)$ y $m_2 = -\displaystyle\frac{4}{3}$:
+
+    $$
+    \begin{gather*}
+    y - (-2) = -\frac{4}{3}(x - 5)\\[15pt]
+    y + 2 = -\frac{4}{3}(x - 5)\\[15pt]
+    3(y + 2) = -4(x - 5)\\[15pt]
+    3y + 6 = -4x + 20
+    \end{gather*}
+    $$
+
+    Reorganizamos los términos en la forma general $Ax + By + C = 0$:
+
+    $$
+    4x + 3y + 6 - 20 = 0 \implies 4x + 3y - 14 = 0
+    $$
+
+**Respuesta:** La ecuación general es $4x + 3y - 14 = 0$.
 
 </Ejercicio>
 
@@ -41,45 +78,158 @@ $$
 
 ### Resolución
 
-Explica el procedimiento paso a paso:
+    ### Paso 1: Completar cuadrados para identificar la cónica
 
-$$
-x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
-$$
+    Agrupamos las variables $x$ e $y$:
 
-**Respuesta:** escribe aquí el resultado final.
+    $$
+    (x^2 - 6x) + (y^2 + 4y) = 12
+    $$
+
+    Completamos los trinomios cuadrados perfectos:
+
+    $$
+    \begin{gather*}
+    (x^2 - 6x + 9) + (y^2 + 4y + 4) = 12 + 9 + 4\\[15pt]
+    (x - 3)^2 + (y + 2)^2 = 25
+    \end{gather*}
+    $$
+
+    ### Paso 2: Identificación de la sección cónica y sus elementos
+
+    La ecuación tiene la forma $(x - h)^2 + (y - k)^2 = r^2$, por lo que corresponde a una **circunferencia**.
+
+    * **Centro** $C(h, k)$**:** $(3, -2)$
+
+    * **Radio** $r$**:** $\sqrt{25} = 5$
+
+**Respuesta:** Es una circunferencia con centro en $C = (3, -2)$ y radio $r = 5$.
 
 </Ejercicio>
 
 <Ejercicio numero={3} titulo="Escribe el título del ejercicio 3" geogebraId="knyfx3et" archivo="/geogebra/semana-06/sesion-02/knyfx3et.ggb" dificultad="Intermedio">
 
-**Enunciado.** Una hipérbola tiene centro $C+(-2,3)$, vértices $(-5,3)$ y $(1,3)$, y focos $(-6,3)$ y $(2,3)$. Construya la ecuación general de la hipérbola a partir de los elementos proporcionados.
+**Enunciado.** Una hipérbola tiene centro $C=(-2,3)$, vértices $(-5,3)$ y $(1,3)$, y focos $(-6,3)$ y $(2,3)$. Construya la ecuación general de la hipérbola a partir de los elementos proporcionados.
 
 ### Resolución
 
-Explica el procedimiento paso a paso:
+    ### Paso 1: Determinar la orientación
 
-$$
-x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
-$$
+    Los datos son:
 
-**Respuesta:** escribe aquí el resultado final.
+    * Centro: $C(-2, 3) \implies h = -2, \, k = 3$
+
+    * Vértices: $V_1(-5, 3)$ y $V_2(1, 3)$
+
+    * Focos: $F_1(-6, 3)$ y $F_2(2, 3)$
+
+    Como la coordenada $y$ se mantiene constante ($y = 3$), la hipérbola es **horizontal**. Su ecuación ordinaria es:
+
+    $$
+    \frac{(x - h)^2}{a^2} - \frac{(y - k)^2}{b^2} = 1
+    $$
+
+    ### Paso 2: Encontrar los parámetros $a$, $c$ y $b$
+
+    * Distancia del centro a un vértice ($a$):
+
+
+    $$
+    a = \vert{}1 - (-2)\vert{} = 3 \implies a^2 = 9
+    $$
+
+    * Distancia del centro a un foco ($c$):
+
+
+    $$
+    c = \vert{}2 - (-2)\vert{} = 4 \implies c^2 = 16
+    $$
+
+    * Relación fundamental $c^2 = a^2 + b^2$:
+
+
+    $$
+    16 = 9 + b^2 \implies b^2 = 7
+    $$
+
+    ### Paso 3: Construir la ecuación ordinaria
+
+    Sustituyendo los valores de $h$, $k$, $a^2$ y $b^2$:
+
+    $$
+    \frac{(x + 2)^2}{9} - \frac{(y - 3)^2}{7} = 1
+    $$
+
+    ### Paso 4: Obtener la ecuación general
+
+    Multiplicamos por el mínimo común múltiplo ($63$):
+
+    $$
+    \begin{gather*}
+    7(x + 2)^2 - 9(y - 3)^2 = 63\\[15pt]
+    7(x^2 + 4x + 4) - 9(y^2 - 6y + 9) = 63\\[15pt]
+    7x^2 + 28x + 28 - 9y^2 + 54y - 81 = 63
+    \end{gather*}
+    $$
+
+    Agrupamos e igualamos a cero:
+
+    $$
+    \begin{gather*}
+    7x^2 - 9y^2 + 28x + 54y + 28 - 81 - 63 = 0\\[15pt]
+    7x^2 - 9y^2 + 28x + 54y - 116 = 0
+    \end{gather*}
+    $$
+
+**Respuesta:** La ecuación general es $7x^2 - 9y^2 + 28x + 54y - 116 = 0$.
 
 </Ejercicio>
 
 <Ejercicio numero={4} titulo="Escribe el título del ejercicio 4" geogebraId="kp4n3v7x" archivo="/geogebra/semana-06/sesion-02/kp4n3v7x.ggb" dificultad="Intermedio">
 
-**Enunciado.** Una circunferencia tiene centro sobre el eje x y pasa por los puntos A=(2,3), B=(6,3). Determine la ecuación general de la circunferencia que satisface estas condiciones.
+**Enunciado.** Una circunferencia tiene centro sobre el eje $x$ y pasa por los puntos $A=(2,3)$, $B=(6,3)$. Determine la ecuación general de la circunferencia que satisface estas condiciones.
 
 ### Resolución
 
-Explica el procedimiento paso a paso:
+    ### Paso 1: Determinar el centro de la circunferencia
 
-$$
-x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
-$$
+    * Al estar sobre el eje $x$, el centro tiene la forma $C = (h, 0)$.
 
-**Respuesta:** escribe aquí el resultado final.
+    * Los puntos $A(2,3)$ y $B(6,3)$ definen una cuerda horizontal. Por simetría, la abscisa $h$ coincide con el punto medio de $\overline{AB}$:
+
+    $$
+    h = \frac{2 + 6}{2} = 4 \implies C = (4, 0)
+    $$
+
+    ### Paso 2: Calcular el radio ($r$)
+
+    Calculamos la distancia del centro $C(4,0)$ a $A(2,3)$:
+
+    $$
+    \begin{gather*}
+    r^2 = (2 - 4)^2 + (3 - 0)^2\\[15pt]
+    r^2 = (-2)^2 + (3)^2 = 4 + 9 = 13
+    \end{gather*}
+    $$
+
+    ### Paso 3: Obtener la ecuación general
+
+    Escribimos la ecuación ordinaria:
+
+    $$
+    (x - 4)^2 + y^2 = 13
+    $$
+
+    Desarrollamos el binomio:
+
+    $$
+    \begin{gather*}
+    x^2 - 8x + 16 + y^2 = 13\\[15pt]
+    x^2 + y^2 - 8x + 3 = 0
+    \end{gather*}
+    $$
+
+**Respuesta:** La ecuación general es $x^2 + y^2 - 8x + 3 = 0$.
 
 </Ejercicio>
 
@@ -89,13 +239,53 @@ $$
 
 ### Resolución
 
-Explica el procedimiento paso a paso:
+    ### Paso 1: Puntos de intersección
 
-$$
-x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
-$$
+    Despejamos $x$ de la recta $L$:
 
-**Respuesta:** escribe aquí el resultado final.
+    $$
+    x = 2y - 3
+    $$
+
+    Sustituimos $x$ en la ecuación de la parábola:
+
+    $$
+    \begin{gather*}
+    y^2 - 4(2y - 3) = 0\\[15pt]
+    y^2 - 8y + 12 = 0
+    \end{gather*}
+    $$
+
+    Factorizamos la ecuación cuadrática:
+
+    $$
+    (y - 6)(y - 2) = 0 \implies y_1 = 6, \quad y_2 = 2
+    $$
+
+    ### Paso 2: Coordenadas de los extremos de la cuerda
+
+    * Para $y_1 = 6$: $x_1 = 2(6) - 3 = 9 \implies P_1 = (9, 6)$
+
+    * Para $y_2 = 2$: $x_2 = 2(2) - 3 = 1 \implies P_2 = (1, 2)$
+
+    ### Paso 3: Longitud de la cuerda
+
+    Calculamos la distancia entre $P_1$ y $P_2$:
+
+    $$
+    \begin{gather*}
+    d = \sqrt{(1 - 9)^2 + (2 - 6)^2}\\[15pt]
+    d = \sqrt{(-8)^2 + (-4)^2} = \sqrt{64 + 16} = \sqrt{80}
+    \end{gather*}
+    $$
+
+    Simplificamos el radical:
+
+    $$
+    d = \sqrt{16 \cdot 5} = 4\sqrt{5}
+    $$
+
+**Respuesta:** La longitud de la cuerda:es $4\sqrt{5}$ unidades ($\approx 8.94$).
 
 </Ejercicio>
 

@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a8a9faf-a936-49f8-9e30-b144defe4efe" name="Changes" comment="Se agrego la parte teorica sem03.02">
+    <list default="true" id="0a8a9faf-a936-49f8-9e30-b144defe4efe" name="Changes" comment="Se agrego la resolucion de la Practica calificada 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/sesiones/semana-03-sesion-01.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/sesiones/semana-03-sesion-01.mdx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/content/sesiones/semana-06-sesion-02.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/sesiones/semana-06-sesion-02.mdx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -158,7 +157,7 @@
       <workItem from="1788395741345" duration="57000" />
       <workItem from="1788396478792" duration="2130000" />
       <workItem from="1788400978609" duration="1410000" />
-      <workItem from="1790280504663" duration="2076000" />
+      <workItem from="1790280504663" duration="3669000" />
     </task>
     <task id="LOCAL-00001" summary="Se agrego la parte teorica sem03.02">
       <option name="closed" value="true" />
@@ -168,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1788398724014</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Se agrego la resolucion de la Practica calificada 1">
+      <option name="closed" value="true" />
+      <created>1790282936931</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1790282936931</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +183,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se agrego la parte teorica sem03.02" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se agrego la parte teorica sem03.02" />
+    <MESSAGE value="Se agrego la resolucion de la Practica calificada 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agrego la resolucion de la Practica calificada 1" />
   </component>
 </project>
