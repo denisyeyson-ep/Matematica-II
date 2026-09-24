@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a8a9faf-a936-49f8-9e30-b144defe4efe" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+    <list default="true" id="0a8a9faf-a936-49f8-9e30-b144defe4efe" name="Changes" comment="Se agrego la parte teorica sem03.02">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/content/sesiones/semana-03-sesion-01.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/sesiones/semana-03-sesion-01.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/sesiones/semana-03-sesion-02.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/sesiones/semana-03-sesion-02.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/sesiones/semana-06-sesion-02.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/sesiones/semana-06-sesion-02.mdx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,11 +156,26 @@
       <workItem from="1788379566097" duration="1486000" />
       <workItem from="1788381077202" duration="12255000" />
       <workItem from="1788395741345" duration="57000" />
-      <workItem from="1788396478792" duration="2070000" />
+      <workItem from="1788396478792" duration="2130000" />
+      <workItem from="1788400978609" duration="1410000" />
+      <workItem from="1790280504663" duration="2076000" />
     </task>
+    <task id="LOCAL-00001" summary="Se agrego la parte teorica sem03.02">
+      <option name="closed" value="true" />
+      <created>1788398724014</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1788398724014</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Se agrego la parte teorica sem03.02" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agrego la parte teorica sem03.02" />
   </component>
 </project>

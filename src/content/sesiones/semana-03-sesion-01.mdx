@@ -1,6 +1,6 @@
 ---
 title: "Secciones cónicas. Lugar geométrico"
-description: "Plantilla preparada para completar la teoría y los cinco ejercicios de esta sesión."
+description: "Las secciones cónicas son las curvas que se obtienen al cortar una superficie cónica de dos hojas con un plano, mientras que un lugar geométrico es el conjunto de todos los puntos de un plano que cumplen una condición o propiedad específica."
 week: 3
 session: 1
 date: 2026-08-24
@@ -17,25 +17,50 @@ exercises: 5
 
 import Ejercicio from '../../components/Ejercicio.astro';
 
-## Teoría
+## Secciones cónicas
 
-Escribe aquí la explicación del tema estudiado durante la sesión. Puedes añadir definiciones, propiedades, procedimientos y ejemplos.
+El nombre de “secciones cónicas” se derivó del hecho de que estas figuras o lugares geométricos se encontraron originalmente en un cono. Cuando se hace intersecar un cono con un plano obtenemos distintas figuras. Cada una de ellas es una cónica.
 
-### Fórmula principal
-
-Reemplaza este ejemplo con la fórmula correspondiente:
+### Circunferencia
 
 $$
-f(x)=ax+b
+C: x^2 + y^2 + Dx + Ey + F = 0
 $$
 
-> **Nota:** cuando completes esta sesión, cambia el valor de published a true en las propiedades del archivo.
+### Parábola
+
+$$
+P: x^2 + Dx + Ey + F = 0
+$$
+
+### Elipse
+
+$$
+E: Ax^2 + By^2 + Dx + Ey + F = 0
+$$
+
+### Hipérbola
+
+$$
+H: Ax^2 + By^2 + Dx + Ey + F = 0
+$$
+
+## Lugar geométrico
+
+Se define un lugar geométrico o gráfica de una ecuación de dos variables $E=(x,y)=0$ al conjunto de puntos de un plano, en el cual todos ellos gozan de una misma propiedad o condición.
+
+## Técnica para completar cuadrados
+
+Para el dominio de secciones cónicas es relevante la técnica de completar cuadrados, que es una técnica para factorizar expresiones cuadráticas $Ax^2 + Bx + C$, donde $A=1$ y expresarlas de la forma $(x+a)^2+b$, parte importante de las ecuaciones ordinarias de la circunferencia, parabola, elipse e hipérbola.
+
+> **Importante:** La técnica de completar cuadrados también permite resolver problemas de ecuaciónes cuadráticas o determinar funciones inversas que es un tópico para tratar más adelante.
+
 
 ## Ejercicios resueltos
 
 <Ejercicio numero={1} titulo="Escribe el título del ejercicio 1" geogebraId="gyefxqed" archivo="/geogebra/semana-03/sesion-01/gyefxqed.ggb" dificultad="Intermedio">
 
-**Enunciado.** Dada la expresión cuadrática $$x^2-3x-14$$. Determine su expresión equivalente, a partir de la completación de cuadrados.
+**Enunciado.** Dada la expresión cuadrática $x^2-3x-14$. Determine su expresión equivalente, a partir de la completación de cuadrados.
 
 ### Resolución
 
@@ -51,7 +76,7 @@ $$
 
 <Ejercicio numero={2} titulo="Escribe el título del ejercicio 2" geogebraId="vdmvmptp" archivo="/geogebra/semana-03/sesion-01/vdmvmptp.ggb" dificultad="Intermedio">
 
-**Enunciado.** Dada la expresión cuadrática $$2x^2 - 8x + 11$$. Determine su expresión equivalente, a partir de la completación de cuadrados.
+**Enunciado.** Dada la expresión cuadrática $2x^2 - 8x + 11$. Determine su expresión equivalente, a partir de la completación de cuadrados.
 
 ### Resolución
 
@@ -67,7 +92,7 @@ $$
 
 <Ejercicio numero={3} titulo="Escribe el título del ejercicio 3" geogebraId="uj8c8bd9" archivo="/geogebra/semana-03/sesion-01/uj8c8bd9.ggb" dificultad="Intermedio">
 
-**Enunciado.** Un punto se mueve de tal manera que su distancia al punto $$A(-8,5)$$ es siempre igual a 7 unidades. Hallar la ecuación del lugar geométrico.
+**Enunciado.** Un punto se mueve de tal manera que su distancia al punto $A(-8,5)$ es siempre igual a 7 unidades. Hallar la ecuación del lugar geométrico.
 
 ### Resolución
 
@@ -83,7 +108,7 @@ $$
 
 <Ejercicio numero={4} titulo="Escribe el título del ejercicio 4" geogebraId="ypua6nh3" archivo="/geogebra/semana-03/sesion-01/ypua6nh3.ggb" dificultad="Intermedio">
 
-**Enunciado.** Un punto se mueve de tal manera que su distancia al punto $$A(-3,5)$$ es siempre igual a su distancia al eje $$X$$ disminuida en una 1 unidad. Hallar la ecuación del lugar geométrico.
+**Enunciado.** Un punto se mueve de tal manera que su distancia al punto $A(-3,5)$ es siempre igual a su distancia al eje $X$ disminuida en una 1 unidad. Hallar la ecuación del lugar geométrico.
 
 ### Resolución
 
@@ -99,7 +124,7 @@ $$
 
 <Ejercicio numero={5} titulo="Escribe el título del ejercicio 5" geogebraId="qy2gqskg" archivo="/geogebra/semana-03/sesion-01/qy2gqskg.ggb" dificultad="Intermedio">
 
-**Enunciado.** Dada la expresión cuadrática $$5x^2 - 3x + 1$$. Determine su expresión equivalente.
+**Enunciado.** Dada la expresión cuadrática $5x^2 - 3x + 1$. Determine su expresión equivalente.
 
 ### Resolución
 
