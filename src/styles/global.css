@@ -1568,3 +1568,12 @@ svg {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Ajuste de tamaño de exponentes y subíndices en LaTeX */
+.katex .supsub .vlist-t {
+  font-size: 0.8em;
+}
+
+.katex .msupsub {
+  font-size: 0.8em;
+}

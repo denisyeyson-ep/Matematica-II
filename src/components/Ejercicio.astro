@@ -17,6 +17,8 @@ const {
   archivo = '',
   dificultad = 'Intermedio',
 } = Astro.props;
+
+const tieneGrafico = geogebraId.trim() !== '' || archivo.trim() !== '';
 ---
 
 <article class="exercise-card" id={'ejercicio-' + numero} data-pagefind-body>
@@ -29,5 +31,7 @@ const {
     <span class="difficulty-badge"><CheckCircle2 size={14} aria-hidden="true" /> {dificultad}</span>
   </header>
   <div class="exercise-content"><slot /></div>
-  <GeoGebra id={geogebraId} titulo={'Ejercicio ' + numero + ': ' + titulo} archivo={archivo} />
+  {tieneGrafico && (
+      <GeoGebra id={geogebraId} titulo={'Ejercicio ' + numero + ': ' + titulo} archivo={archivo} />
+  )}
 </article>
