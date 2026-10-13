@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a8a9faf-a936-49f8-9e30-b144defe4efe" name="Changes" comment="Se agrego la resolucion de la Practica calificada 1 y mejoraron las imegenes SVG">
+    <list default="true" id="0a8a9faf-a936-49f8-9e30-b144defe4efe" name="Changes" comment="Se agregó ejercicios de la semana 10 sesion 1, ejercicios de repaso">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Ejercicio.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Ejercicio.astro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/content/sesiones/semana-10-sesion-01.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/sesiones/semana-10-sesion-01.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/global.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,61 +38,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.4161440363318927" />
-      <entry key="MS500" value="2.82892475424499" />
-      <entry key="S2" value="4.745005318333053" />
-      <entry key="S5" value="5.441593899236893" />
-      <entry key="S10" value="5.710372427563747" />
-      <entry key="S30" value="5.901036853834314" />
-      <entry key="S60" value="5.950209303053393" />
-      <entry key="M2" value="5.9768007243511985" />
-      <entry key="M5" value="6.58698928148429" />
-      <entry key="M10" value="11.606855124148565" />
-      <entry key="M15" value="19.45707023795692" />
-      <entry key="M30" value="45.14463029666552" />
-      <entry key="H1" value="81.82127892212502" />
-      <entry key="H2" value="115.93086900239213" />
-      <entry key="H4" value="139.79414668115072" />
-      <entry key="D1" value="164.45164678067388" />
-      <entry key="W1" value="169.19369525869976" />
+      <entry key="MS100" value="1.7856550953824026" />
+      <entry key="MS500" value="3.5144690633815974" />
+      <entry key="S2" value="5.607262199951216" />
+      <entry key="S5" value="6.3778491719097445" />
+      <entry key="S10" value="6.676827251853633" />
+      <entry key="S30" value="6.889459079786035" />
+      <entry key="S60" value="6.94436931220062" />
+      <entry key="M2" value="6.973866959464625" />
+      <entry key="M5" value="7.585695778474571" />
+      <entry key="M10" value="12.605715435094382" />
+      <entry key="M15" value="20.45579654394" />
+      <entry key="M30" value="46.143152649058436" />
+      <entry key="H1" value="82.81993984806947" />
+      <entry key="H2" value="116.92992034541605" />
+      <entry key="H4" value="140.79357471544" />
+      <entry key="D1" value="165.45153463856397" />
+      <entry key="W1" value="170.19367877643984" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
       <entry key="S2" value="0.0" />
-      <entry key="S5" value="5.398581677246297E-131" />
-      <entry key="S10" value="7.347504118574069E-66" />
-      <entry key="S30" value="1.944076181498189E-22" />
-      <entry key="S60" value="1.394301323781264E-11" />
-      <entry key="M2" value="3.734034445182936E-6" />
-      <entry key="M5" value="0.0067432820923681485" />
-      <entry key="M10" value="0.08211748956445364" />
-      <entry key="M15" value="0.18892544013074417" />
-      <entry key="M30" value="0.4346555419303247" />
-      <entry key="H1" value="0.659284113209415" />
-      <entry key="H2" value="0.811963123060041" />
-      <entry key="H4" value="0.9010899639103972" />
-      <entry key="D1" value="0.9827914255348339" />
-      <entry key="W1" value="0.9975233059515555" />
+      <entry key="S5" value="5.335340810077274E-131" />
+      <entry key="S10" value="7.304341729462874E-66" />
+      <entry key="S30" value="1.9402619238821903E-22" />
+      <entry key="S60" value="1.3929328497390627E-11" />
+      <entry key="M2" value="3.732201561731443E-6" />
+      <entry key="M5" value="0.006741957897761308" />
+      <entry key="M10" value="0.08210942636361133" />
+      <entry key="M15" value="0.18891307273936428" />
+      <entry key="M30" value="0.4346413150396133" />
+      <entry key="H1" value="0.6592733234703293" />
+      <entry key="H2" value="0.8119564788031004" />
+      <entry key="H4" value="0.9010862771139622" />
+      <entry key="D1" value="0.9827907553542293" />
+      <entry key="W1" value="0.9975232087763127" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.3720797181217557" />
-      <entry key="MS500" value="2.8029860574525363" />
-      <entry key="S2" value="4.733446665767105" />
-      <entry key="S5" value="5.43629642461881" />
-      <entry key="S10" value="5.707596589200491" />
-      <entry key="S30" value="5.900081808658154" />
-      <entry key="S60" value="5.949727960550345" />
-      <entry key="M2" value="5.976562694482341" />
-      <entry key="M5" value="6.59358450417703" />
-      <entry key="M10" value="11.68860464171035" />
-      <entry key="M15" value="19.645437184376362" />
-      <entry key="M30" value="45.57856095682724" />
-      <entry key="H1" value="82.4799369910855" />
-      <entry key="H2" value="116.74241071192135" />
-      <entry key="H4" value="140.69499043919365" />
-      <entry key="D1" value="165.43439130605174" />
-      <entry key="W1" value="170.1912117068901" />
+      <entry key="MS100" value="1.3159936202695997" />
+      <entry key="MS500" value="3.3802563237451966" />
+      <entry key="S2" value="5.567010008727457" />
+      <entry key="S5" value="6.360899405256236" />
+      <entry key="S10" value="6.668193291248997" />
+      <entry key="S30" value="6.886543918610344" />
+      <entry key="S60" value="6.9429069655816384" />
+      <entry key="M2" value="6.973138187692503" />
+      <entry key="M5" value="7.592093333629916" />
+      <entry key="M10" value="12.68735873455735" />
+      <entry key="M15" value="20.644085697770368" />
+      <entry key="M30" value="46.577036374641345" />
+      <entry key="H1" value="83.47857077169543" />
+      <entry key="H2" value="117.74144723118268" />
+      <entry key="H4" value="141.69441069620845" />
+      <entry key="D1" value="166.4342778118778" />
+      <entry key="W1" value="171.1911950300391" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -106,27 +104,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "javascript.preferred.runtime.type.id": "node",
-    "last_opened_file_path": "/media/denisyeyson/Compartido/Proyectos/UTP/Matematica-II",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.sync",
-    "ts.external.directory.path": "/media/denisyeyson/Compartido/Proyectos/UTP/Matematica-II/node_modules/typescript/lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/media/denisyeyson/Compartido/Proyectos/UTP/Matematica-II&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/media/denisyeyson/Compartido/Proyectos/UTP/Matematica-II/node_modules/typescript/lib&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/geogebra/semana-03/sesion-01" />
@@ -163,7 +161,12 @@
       <workItem from="1791395842941" duration="1410000" />
       <workItem from="1791407427765" duration="6483000" />
       <workItem from="1791476756891" duration="7944000" />
-      <workItem from="1791513464217" duration="3065000" />
+      <workItem from="1791513464217" duration="3432000" />
+      <workItem from="1791824683407" duration="108000" />
+      <workItem from="1791854851340" duration="350000" />
+      <workItem from="1791909493979" duration="1129000" />
+      <workItem from="1791910657298" duration="3653000" />
+      <workItem from="1791924202573" duration="4818000" />
     </task>
     <task id="LOCAL-00001" summary="Se agrego la parte teorica sem03.02">
       <option name="closed" value="true" />
@@ -197,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1790285271690</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Se agregó ejercicios de la semana 10 sesion 1, ejercicios de repaso">
+      <option name="closed" value="true" />
+      <created>1791516651183</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1791516651183</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +218,7 @@
     <MESSAGE value="Se agrego la parte teorica sem03.02" />
     <MESSAGE value="Se agrego la resolucion de la Practica calificada 1" />
     <MESSAGE value="Se agrego la resolucion de la Practica calificada 1 y mejoraron las imegenes SVG" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se agrego la resolucion de la Practica calificada 1 y mejoraron las imegenes SVG" />
+    <MESSAGE value="Se agregó ejercicios de la semana 10 sesion 1, ejercicios de repaso" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregó ejercicios de la semana 10 sesion 1, ejercicios de repaso" />
   </component>
 </project>

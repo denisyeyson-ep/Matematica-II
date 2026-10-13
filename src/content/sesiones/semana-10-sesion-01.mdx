@@ -735,6 +735,140 @@ import Ejercicio from '../../components/Ejercicio.astro';
 
     **Enunciado.** Sean $A = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}$, $B = \begin{bmatrix} 2 & -1 \\ 4 & 1 \end{bmatrix}$. Determine $X$ en: $AX+B=A^2$.
 
+    ### Paso 1: Despejamos $X$.
+
+    $$
+    \begin{gather*}
+    AX+B=A^2\\[15pt]
+    AX=A^2-B\\[15pt]
+    X=A^{-1}\left(A^2-B\right)
+    \end{gather*}
+    $$
+
+    Como $A$ está a la izquierda de $X$, multiplicamos por $A^{-1}$ por la izquierda.
+
+    ### Paso 2: Calculamos $A^{-1}$ por el método de la adjunta.
+
+    **Determinante:**
+
+    $$
+    \det(A)=1\cdot 3-2\cdot 0=3
+    $$
+
+    Como $\det(A)\neq 0$, existe $A^{-1}$.
+
+    **Cofactores:**
+
+    $$
+    \begin{gather*}
+    C_{11}=+(3)=3 \qquad C_{12}=-(0)=0\\[15pt]
+    C_{21}=-(2)=-2 \qquad C_{22}=+(1)=1
+    \end{gather*}
+    $$
+
+    **Matriz de cofactores y adjunta:**
+
+    $$
+    \operatorname{Cof}(A)=
+    \begin{bmatrix}
+    \;3\; & \;0\; \\[2pt]
+    \;-2\; & \;1\;
+    \end{bmatrix}
+    \qquad
+    \operatorname{Adj}(A)=\left(\operatorname{Cof}(A)\right)^{T}=
+    \begin{bmatrix}
+    \;3\; & \;-2\; \\[2pt]
+    \;0\; & \;1\;
+    \end{bmatrix}
+    $$
+
+    **Inversa:**
+
+    $$
+    A^{-1}=\dfrac{1}{3}
+    \begin{bmatrix}
+    \;3\; & \;-2\; \\[2pt]
+    \;0\; & \;1\;
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    \;1\; & \;-\dfrac{2}{3}\; \\[10pt]
+    \;0\; & \;\dfrac{1}{3}\;
+    \end{bmatrix}
+    $$
+
+    ### Paso 3: Calculamos $A^2$.
+
+    $$
+    A^2=
+    \begin{bmatrix}
+    \;1\; & \;2\; \\[2pt]
+    \;0\; & \;3\;
+    \end{bmatrix}
+    \begin{bmatrix}
+    \;1\; & \;2\; \\[2pt]
+    \;0\; & \;3\;
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    \;1\; & \;8\; \\[2pt]
+    \;0\; & \;9\;
+    \end{bmatrix}
+    $$
+
+    ### Paso 4: Calculamos $A^2-B$.
+
+    $$
+    A^2-B=
+    \begin{bmatrix}
+    \;1\; & \;8\; \\[2pt]
+    \;0\; & \;9\;
+    \end{bmatrix}
+    -
+    \begin{bmatrix}
+    \;2\; & \;-1\; \\[2pt]
+    \;4\; & \;1\;
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    \;-1\; & \;9\; \\[2pt]
+    \;-4\; & \;8\;
+    \end{bmatrix}
+    $$
+
+    ### Paso 5: Multiplicamos $A^{-1}\left(A^2-B\right)$.
+
+    $$
+    X=
+    \begin{bmatrix}
+    \;1\; & \;-\dfrac{2}{3}\; \\[10pt]
+    \;0\; & \;\dfrac{1}{3}\;
+    \end{bmatrix}
+    \begin{bmatrix}
+    \;-1\; & \;9\; \\[10pt]
+    \;-4\; & \;8\;
+    \end{bmatrix}
+    $$
+
+    $$
+    \begin{gather*}
+    x_{11}=1(-1)+\left(-\dfrac{2}{3}\right)(-4)=-1+\dfrac{8}{3}=\dfrac{5}{3}\\[15pt]
+    x_{12}=1(9)+\left(-\dfrac{2}{3}\right)(8)=9-\dfrac{16}{3}=\dfrac{11}{3}\\[15pt]
+    x_{21}=0(-1)+\dfrac{1}{3}(-4)=-\dfrac{4}{3}\\[15pt]
+    x_{22}=0(9)+\dfrac{1}{3}(8)=\dfrac{8}{3}
+    \end{gather*}
+    $$
+
+    **Respuesta:**
+
+    $$
+    X=
+    \begin{bmatrix}
+    \;\dfrac{5}{3}\; & \;\dfrac{11}{3}\; \\[10pt]
+    \;-\dfrac{4}{3}\; & \;\dfrac{8}{3}\;
+    \end{bmatrix}
+    $$
+
 </Ejercicio>
 
 ## IV. MATRIZ INVERSA MEDIANTE COFACTORES Y ADJUNTA
@@ -785,9 +919,317 @@ import Ejercicio from '../../components/Ejercicio.astro';
     \end{gather*}
     $$
 
+    ### Método de la adjunta
+
+    Para cada matriz $M$ de orden $3$ seguimos los pasos:
+
+    $$
+    \begin{gather*}
+    M^{-1}=\frac{1}{\det(M)}\operatorname{Adj}(M)\\[15pt]
+    \operatorname{Adj}(M)=\left(\operatorname{Cof}(M)\right)^{T}\\[15pt]
+    C_{ij}=(-1)^{i+j}M_{ij}
+    \end{gather*}
+    $$
+
+    ### Matriz $A$
+
+    **Paso 1: Determinante** (por la fila 1):
+
+    $$
+    \begin{gather*}
+    \det(A)=1(1\cdot 2-3\cdot 0)-2(0\cdot 2-3\cdot 1)+(-1)(0\cdot 0-1\cdot 1)\\[15pt]
+    \det(A)=2+6+1=9
+    \end{gather*}
+    $$
+
+    **Paso 2: Cofactores**
+
+    $$
+    \begin{gather*}
+    C_{11}=+(2-0)=2 \qquad C_{12}=-(0-3)=3 \qquad C_{13}=+(0-1)=-1\\[15pt]
+    C_{21}=-(4-0)=-4 \qquad C_{22}=+(2+1)=3 \qquad C_{23}=-(0-2)=2\\[15pt]
+    C_{31}=+(6+1)=7 \qquad C_{32}=-(3-0)=-3 \qquad C_{33}=+(1-0)=1
+    \end{gather*}
+    $$
+
+    **Paso 3: Matriz de cofactores y adjunta**
+
+    $$
+    \operatorname{Cof}(A)=
+    \begin{bmatrix}
+    \;2\; & \;3\; & \;-1\; \\[2pt]
+    \;-4\; & \;3\; & \;2\; \\[2pt]
+    \;7\; & \;-3\; & \;1\;
+    \end{bmatrix}
+    \qquad
+    \operatorname{Adj}(A)=
+    \begin{bmatrix}
+    \;2\; & \;-4\; & \;7\; \\[2pt]
+    \;3\; & \;3\; & \;-3\; \\[2pt]
+    \;-1\; & \;2\; & \;1\;
+    \end{bmatrix}
+    $$
+
+    **Paso 4: Inversa**
+
+    $$
+    A^{-1}=\dfrac{1}{9}
+    \begin{bmatrix}
+    \;2\; & \;-4\; & \;7\; \\[2pt]
+    \;3\; & \;3\; & \;-3\; \\[2pt]
+    \;-1\; & \;2\; & \;1\;
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    \;\dfrac{2}{9}\; & \;-\dfrac{4}{9}\; & \;\dfrac{7}{9}\; \\[10pt]
+    \;\dfrac{1}{3}\; & \;\dfrac{1}{3}\; & \;-\dfrac{1}{3}\; \\[10pt]
+    \;-\dfrac{1}{9}\; & \;\dfrac{2}{9}\; & \;\dfrac{1}{9}\;
+    \end{bmatrix}
+    $$
+
+    ### Matriz $B$
+
+    **Paso 1: Determinante**
+
+    $$
+    \begin{gather*}
+    \det(B)=2(1\cdot 1-1\cdot 0)-1(1\cdot 1-1\cdot 1)+0\\[15pt]
+    \det(B)=2-0=2
+    \end{gather*}
+    $$
+
+    **Paso 2: Cofactores**
+
+    $$
+    \begin{gather*}
+    C_{11}=+(1-0)=1 \qquad C_{12}=-(1-1)=0 \qquad C_{13}=+(0-1)=-1\\[15pt]
+    C_{21}=-(1-0)=-1 \qquad C_{22}=+(2-0)=2 \qquad C_{23}=-(0-1)=1\\[15pt]
+    C_{31}=+(1-0)=1 \qquad C_{32}=-(2-0)=-2 \qquad C_{33}=+(2-1)=1
+    \end{gather*}
+    $$
+
+    **Paso 3: Matriz de cofactores y adjunta**
+
+    $$
+    \operatorname{Cof}(B)=
+    \begin{bmatrix}
+    \;1\; & \;0\; & \;-1\; \\[2pt]
+    \;-1\; & \;2\; & \;1\; \\[2pt]
+    \;1\; & \;-2\; & \;1\;
+    \end{bmatrix}
+    \qquad
+    \operatorname{Adj}(B)=
+    \begin{bmatrix}
+    \;1\; & \;-1\; & \;1\; \\[2pt]
+    \;0\; & \;2\; & \;-2\; \\[2pt]
+    \;-1\; & \;1\; & \;1\;
+    \end{bmatrix}
+    $$
+
+    **Paso 4: Inversa**
+
+    $$
+    B^{-1}=\dfrac{1}{2}
+    \begin{bmatrix}
+    \;1\; & \;-1\; & \;1\; \\[2pt]
+    \;0\; & \;2\; & \;-2\; \\[2pt]
+    \;-1\; & \;1\; & \;1\;
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    \;\dfrac{1}{2}\; & \;-\dfrac{1}{2}\; & \;\dfrac{1}{2}\; \\[10pt]
+    \;0\; & \;1\; & \;-1\; \\[10pt]
+    \;-\dfrac{1}{2}\; & \;\dfrac{1}{2}\; & \;\dfrac{1}{2}\;
+    \end{bmatrix}
+    $$
+
+    ### Matriz $C$
+
+    **Paso 1: Determinante**
+
+    $$
+    \begin{gather*}
+    \det(C)=1(1\cdot 1-1\cdot 0)-1(2\cdot 1-1\cdot 1)+2(2\cdot 0-1\cdot 1)\\[15pt]
+    \det(C)=1-1-2=-2
+    \end{gather*}
+    $$
+
+    **Paso 2: Cofactores**
+
+    $$
+    \begin{gather*}
+    C_{11}=+(1-0)=1 \qquad C_{12}=-(2-1)=-1 \qquad C_{13}=+(0-1)=-1\\[15pt]
+    C_{21}=-(1-0)=-1 \qquad C_{22}=+(1-2)=-1 \qquad C_{23}=-(0-1)=1\\[15pt]
+    C_{31}=+(1-2)=-1 \qquad C_{32}=-(1-4)=3 \qquad C_{33}=+(1-2)=-1
+    \end{gather*}
+    $$
+
+    **Paso 3: Matriz de cofactores y adjunta**
+
+    $$
+    \operatorname{Cof}(C)=
+    \begin{bmatrix}
+    \;1\; & \;-1\; & \;-1\; \\[2pt]
+    \;-1\; & \;-1\; & \;1\; \\[2pt]
+    \;-1\; & \;3\; & \;-1\;
+    \end{bmatrix}
+    \qquad
+    \operatorname{Adj}(C)=
+    \begin{bmatrix}
+    \;1\; & \;-1\; & \;-1\; \\[2pt]
+    \;-1\; & \;-1\; & \;3\; \\[2pt]
+    \;-1\; & \;1\; & \;-1\;
+    \end{bmatrix}
+    $$
+
+    **Paso 4: Inversa**
+
+    $$
+    C^{-1}=-\dfrac{1}{2}
+    \begin{bmatrix}
+    \;1\; & \;-1\; & \;-1\; \\[2pt]
+    \;-1\; & \;-1\; & \;3\; \\[2pt]
+    \;-1\; & \;1\; & \;-1\;
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    \;-\dfrac{1}{2}\; & \;\dfrac{1}{2}\; & \;\dfrac{1}{2}\; \\[10pt]
+    \;\dfrac{1}{2}\; & \;\dfrac{1}{2}\; & \;-\dfrac{3}{2}\; \\[10pt]
+    \;\dfrac{1}{2}\; & \;-\dfrac{1}{2}\; & \;\dfrac{1}{2}\;
+    \end{bmatrix}
+    $$
+
+    ### Matriz $D$
+
+    **Paso 1: Determinante**
+
+    $$
+    \begin{gather*}
+    \det(D)=1(1\cdot 2-3\cdot 1)-0+2(2\cdot 1-1\cdot 1)\\[15pt]
+    \det(D)=-1+2=1
+    \end{gather*}
+    $$
+
+    **Paso 2: Cofactores**
+
+    $$
+    \begin{gather*}
+    C_{11}=+(2-3)=-1 \qquad C_{12}=-(4-3)=-1 \qquad C_{13}=+(2-1)=1\\[15pt]
+    C_{21}=-(0-2)=2 \qquad C_{22}=+(2-2)=0 \qquad C_{23}=-(1-0)=-1\\[15pt]
+    C_{31}=+(0-2)=-2 \qquad C_{32}=-(3-4)=1 \qquad C_{33}=+(1-0)=1
+    \end{gather*}
+    $$
+
+    **Paso 3: Matriz de cofactores y adjunta**
+
+    $$
+    \operatorname{Cof}(D)=
+    \begin{bmatrix}
+    \;-1\; & \;-1\; & \;1\; \\[2pt]
+    \;2\; & \;0\; & \;-1\; \\[2pt]
+    \;-2\; & \;1\; & \;1\;
+    \end{bmatrix}
+    \qquad
+    \operatorname{Adj}(D)=
+    \begin{bmatrix}
+    \;-1\; & \;2\; & \;-2\; \\[2pt]
+    \;-1\; & \;0\; & \;1\; \\[2pt]
+    \;1\; & \;-1\; & \;1\;
+    \end{bmatrix}
+    $$
+
+    **Paso 4: Inversa**
+
+    $$
+    D^{-1}=\dfrac{1}{1}
+    \begin{bmatrix}
+    \;-1\; & \;2\; & \;-2\; \\[2pt]
+    \;-1\; & \;0\; & \;1\; \\[2pt]
+    \;1\; & \;-1\; & \;1\;
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    \;-1\; & \;2\; & \;-2\; \\[2pt]
+    \;-1\; & \;0\; & \;1\; \\[2pt]
+    \;1\; & \;-1\; & \;1\;
+    \end{bmatrix}
+    $$
+
+    ### Matriz $E$
+
+    **Paso 1: Determinante**
+
+    $$
+    \begin{gather*}
+    \det(E)=2(1\cdot 1-0\cdot 0)-1(1\cdot 1-0\cdot 1)+1(1\cdot 0-1\cdot 1)\\[15pt]
+    \det(E)=2-1-1=0
+    \end{gather*}
+    $$
+
+    Como $\det(E)=0$, la matriz $E$ es **singular** y **no existe $E^{-1}$**. Se puede verificar porque la fila 1 es igual a la suma de las filas 2 y 3: $(1,1,0)+(1,0,1)=(2,1,1)$.
+
+    ### Matriz $F$
+
+    **Paso 1: Determinante**
+
+    $$
+    \begin{gather*}
+    \det(F)=1(0\cdot(-2)-4\cdot 3)-2((-1)(-2)-4(-1))+(-3)((-1)\cdot 3-0\cdot(-1))\\[15pt]
+    \det(F)=-12-12+9=-15
+    \end{gather*}
+    $$
+
+    **Paso 2: Cofactores**
+
+    $$
+    \begin{gather*}
+    C_{11}=+(0-12)=-12 \qquad C_{12}=-(2+4)=-6 \qquad C_{13}=+(-3-0)=-3\\[15pt]
+    C_{21}=-(-4+9)=-5 \qquad C_{22}=+(-2-3)=-5 \qquad C_{23}=-(3+2)=-5\\[15pt]
+    C_{31}=+(8-0)=8 \qquad C_{32}=-(4-3)=-1 \qquad C_{33}=+(0+2)=2
+    \end{gather*}
+    $$
+
+    **Paso 3: Matriz de cofactores y adjunta**
+
+    $$
+    \operatorname{Cof}(F)=
+    \begin{bmatrix}
+    \;-12\; & \;-6\; & \;-3\; \\[2pt]
+    \;-5\; & \;-5\; & \;-5\; \\[2pt]
+    \;8\; & \;-1\; & \;2\;
+    \end{bmatrix}
+    \qquad
+    \operatorname{Adj}(F)=
+    \begin{bmatrix}
+    \;-12\; & \;-5\; & \;8\; \\[2pt]
+    \;-6\; & \;-5\; & \;-1\; \\[2pt]
+    \;-3\; & \;-5\; & \;2\;
+    \end{bmatrix}
+    $$
+
+    **Paso 4: Inversa**
+
+    $$
+    F^{-1}=-\dfrac{1}{15}
+    \begin{bmatrix}
+    \;-12\; & \;-5\; & \;8\; \\[2pt]
+    \;-6\; & \;-5\; & \;-1\; \\[2pt]
+    \;-3\; & \;-5\; & \;2\;
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    \;\dfrac{4}{5}\; & \;\dfrac{1}{3}\; & \;-\dfrac{8}{15}\; \\[10pt]
+    \;\dfrac{2}{5}\; & \;\dfrac{1}{3}\; & \;\dfrac{1}{15}\; \\[10pt]
+    \;\dfrac{1}{5}\; & \;\dfrac{1}{3}\; & \;-\dfrac{2}{15}\;
+    \end{bmatrix}
+    $$
+
+    **Respuesta:** Existen $A^{-1}$, $B^{-1}$, $C^{-1}$, $D^{-1}$ y $F^{-1}$ (calculadas arriba). La matriz $E$ no tiene inversa porque $\det(E)=0$.
+
+
 </Ejercicio>
 
-### V. DETERMINANTES
+## V. DETERMINANTES
 
 <Ejercicio numero={20} titulo="Hallar el valor de X" dificultad="Intermedio">
 
@@ -806,6 +1248,45 @@ import Ejercicio from '../../components/Ejercicio.astro';
     $$
 
     Determine el valor de $x$ , justificando la propiedad utilizada para simplificar el cálculo.
+
+    ### Paso 1: Elegimos la fila con más ceros.
+
+    La fila 1 tiene tres ceros, por lo que la **expansión por cofactores** a lo largo de la fila 1 deja un solo término:
+
+    $$
+    \begin{gather*}
+    \det = (-1)^{1+1}\,x\begin{vmatrix}
+    3 & 1 & 1\\
+    1 & 2 & 0\\
+    2 & 1 & 1
+    \end{vmatrix}
+    \end{gather*}
+    $$
+
+    ### Paso 2: Calculamos el determinante $3\times 3$.
+
+    $$
+    \begin{gather*}
+    \begin{vmatrix}
+    3 & 1 & 1\\
+    1 & 2 & 0\\
+    2 & 1 & 1
+    \end{vmatrix}
+    =3(2\cdot 1-0\cdot 1)-1(1\cdot 1-0\cdot 2)+1(1\cdot 1-2\cdot 2)\\[15pt]
+    =6-1-3=2
+    \end{gather*}
+    $$
+
+    ### Paso 3: Igualamos a $48$.
+
+    $$
+    \begin{gather*}
+    2x=48\\[15pt]
+    x=24
+    \end{gather*}
+    $$
+
+    **Respuesta:** $x=24$.
 
 </Ejercicio>
 
@@ -827,6 +1308,45 @@ import Ejercicio from '../../components/Ejercicio.astro';
 
     Determine $x$ evidenciando su procedimiento.
 
+    ### Paso 1: Expandimos por la fila 2.
+
+    La fila 2 solo tiene un elemento distinto de cero ($x$ en la posición $(2,2)$), cuyo signo es $(-1)^{2+2}=+1$:
+
+    $$
+    \begin{gather*}
+    \det = x\begin{vmatrix}
+    2 & 1 & 0\\
+    1 & 3 & 1\\
+    0 & 1 & 2
+    \end{vmatrix}
+    \end{gather*}
+    $$
+
+    ### Paso 2: Calculamos el determinante $3\times 3$.
+
+    $$
+    \begin{gather*}
+    \begin{vmatrix}
+    2 & 1 & 0\\
+    1 & 3 & 1\\
+    0 & 1 & 2
+    \end{vmatrix}
+    =2(3\cdot 2-1\cdot 1)-1(1\cdot 2-1\cdot 0)+0\\[15pt]
+    =10-2=8
+    \end{gather*}
+    $$
+
+    ### Paso 3: Igualamos a $60$.
+
+    $$
+    \begin{gather*}
+    8x=60\\[15pt]
+    x=\frac{60}{8}=\frac{15}{2}
+    \end{gather*}
+    $$
+
+    **Respuesta:** $x=\dfrac{15}{2}=7.5$.
+
 </Ejercicio>
 
 <Ejercicio numero={22} titulo="Hallar el valor de X" dificultad="Intermedio">
@@ -846,6 +1366,45 @@ import Ejercicio from '../../components/Ejercicio.astro';
     $$
 
     Determine el valor de $x$.
+
+    ### Paso 1: Expandimos por la fila 2.
+
+    La fila 2 tiene un solo elemento distinto de cero ($4$ en la posición $(2,2)$), con signo $(-1)^{2+2}=+1$:
+
+    $$
+    \begin{gather*}
+    \det = 4\begin{vmatrix}
+    x & 0 & 0\\
+    2 & 3 & 1\\
+    1 & 1 & 2
+    \end{vmatrix}
+    \end{gather*}
+    $$
+
+    ### Paso 2: Calculamos el determinante $3\times 3$ (por la fila 1).
+
+    $$
+    \begin{gather*}
+    \begin{vmatrix}
+    x & 0 & 0\\
+    2 & 3 & 1\\
+    1 & 1 & 2
+    \end{vmatrix}
+    =x(3\cdot 2-1\cdot 1)=5x
+    \end{gather*}
+    $$
+
+    ### Paso 3: Igualamos a $72$.
+
+    $$
+    \begin{gather*}
+    4(5x)=72\\[15pt]
+    20x=72\\[15pt]
+    x=\frac{72}{20}=\frac{18}{5}
+    \end{gather*}
+    $$
+
+    **Respuesta:** $x=\dfrac{18}{5}=3.6$.
 
 </Ejercicio>
 
@@ -867,6 +1426,47 @@ import Ejercicio from '../../components/Ejercicio.astro';
 
     Determine el valor de $x$.
 
+    ### Paso 1: Expandimos por la fila 1.
+
+    La fila 1 tiene un solo elemento distinto de cero ($5$ en la posición $(1,1)$), con signo $(-1)^{1+1}=+1$:
+
+    $$
+    \begin{gather*}
+    \det = 5\begin{vmatrix}
+    x & 2 & 1\\
+    1 & 2 & 0\\
+    0 & 1 & 2
+    \end{vmatrix}
+    \end{gather*}
+    $$
+
+    ### Paso 2: Calculamos el determinante $3\times 3$.
+
+    $$
+    \begin{gather*}
+    \begin{vmatrix}
+    x & 2 & 1\\
+    1 & 2 & 0\\
+    0 & 1 & 2
+    \end{vmatrix}
+    =x(2\cdot 2-0\cdot 1)-2(1\cdot 2-0\cdot 0)+1(1\cdot 1-2\cdot 0)\\[15pt]
+    =4x-4+1=4x-3
+    \end{gather*}
+    $$
+
+    ### Paso 3: Igualamos a $80$.
+
+    $$
+    \begin{gather*}
+    5(4x-3)=80\\[15pt]
+    4x-3=16\\[15pt]
+    4x=19\\[15pt]
+    x=\frac{19}{4}
+    \end{gather*}
+    $$
+
+    **Respuesta:** $x=\dfrac{19}{4}=4.75$.
+
 </Ejercicio>
 
 <Ejercicio numero={24} titulo="Hallar el valor de X" dificultad="Intermedio">
@@ -886,6 +1486,45 @@ import Ejercicio from '../../components/Ejercicio.astro';
 
     Determine el valor de $x$, explicando por qué la expansión por cofactores resulta más conveniente en una fila específica.
 
+    ### Paso 1: Elegimos la fila 2.
+
+    La fila 2 tiene **tres ceros** y un solo elemento distinto de cero ($3$ en la posición $(2,2)$). Al expandir por esa fila, solo sobrevive un cofactor y el determinante de orden $4$ se reduce a uno de orden $3$. El signo es $(-1)^{2+2}=+1$:
+
+    $$
+    \begin{gather*}
+    \det = 3\begin{vmatrix}
+    x & 0 & 1\\
+    2 & 2 & 1\\
+    1 & 1 & 1
+    \end{vmatrix}
+    \end{gather*}
+    $$
+
+    ### Paso 2: Calculamos el determinante $3\times 3$.
+
+    $$
+    \begin{gather*}
+    \begin{vmatrix}
+    x & 0 & 1\\
+    2 & 2 & 1\\
+    1 & 1 & 1
+    \end{vmatrix}
+    =x(2\cdot 1-1\cdot 1)-0+1(2\cdot 1-2\cdot 1)\\[15pt]
+    =x+0=x
+    \end{gather*}
+    $$
+
+    ### Paso 3: Igualamos a $54$.
+
+    $$
+    \begin{gather*}
+    3x=54\\[15pt]
+    x=18
+    \end{gather*}
+    $$
+
+    **Respuesta:** $x=18$.
+
 </Ejercicio>
 
 <Ejercicio numero={25} titulo="Hallar el valor de X" dificultad="Intermedio">
@@ -904,5 +1543,39 @@ import Ejercicio from '../../components/Ejercicio.astro';
     $$
 
     Determine $x$ evidenciando su procedimiento.
+
+    ### Paso 1: Expandir el determinante por la primera fila
+
+    Aplicamos los signos alternados $+,-,+$ de la expansión por cofactores:
+
+    $$
+    \begin{gather*}
+    \begin{vmatrix}
+    x&1&1\\
+    2&2&1\\
+    1&0&3
+    \end{vmatrix}
+    =
+    x\begin{vmatrix}2&1\\0&3\end{vmatrix}
+    -\begin{vmatrix}2&1\\1&3\end{vmatrix}
+    +\begin{vmatrix}2&2\\1&0\end{vmatrix}\\[15pt]
+    =x(2\cdot3-1\cdot0)-(2\cdot3-1\cdot1)+(2\cdot0-2\cdot1)\\[15pt]
+    =6x-5-2\\[15pt]
+    =6x-7
+    \end{gather*}
+    $$
+
+    ### Paso 2: Igualar el determinante a $21$ y despejar $x$
+
+    $$
+    \begin{gather*}
+    6x-7=21\\[15pt]
+    6x=28\\[15pt]
+    x=\frac{28}{6}\\[15pt]
+    x=\frac{14}{3} \approx 4,667
+    \end{gather*}
+    $$
+
+    **Respuesta:** $x = \dfrac{14}{3} \approx 4.667$.
 
 </Ejercicio>
