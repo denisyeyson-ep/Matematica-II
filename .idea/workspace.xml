@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a8a9faf-a936-49f8-9e30-b144defe4efe" name="Changes" comment="Se agregó ejercicios de la semana 10 sesion 1, ejercicios de repaso">
+    <list default="true" id="0a8a9faf-a936-49f8-9e30-b144defe4efe" name="Changes" comment="Se agregó ejercicios de la semana 10 sesion 1, ejercicios de repaso del 19 al 25">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/content/sesiones/semana-10-sesion-01.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/sesiones/semana-10-sesion-01.mdx" afterDir="false" />
     </list>
@@ -38,61 +38,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.7856550953824026" />
-      <entry key="MS500" value="3.5144690633815974" />
-      <entry key="S2" value="5.607262199951216" />
-      <entry key="S5" value="6.3778491719097445" />
-      <entry key="S10" value="6.676827251853633" />
-      <entry key="S30" value="6.889459079786035" />
-      <entry key="S60" value="6.94436931220062" />
-      <entry key="M2" value="6.973866959464625" />
-      <entry key="M5" value="7.585695778474571" />
-      <entry key="M10" value="12.605715435094382" />
-      <entry key="M15" value="20.45579654394" />
-      <entry key="M30" value="46.143152649058436" />
-      <entry key="H1" value="82.81993984806947" />
-      <entry key="H2" value="116.92992034541605" />
-      <entry key="H4" value="140.79357471544" />
-      <entry key="D1" value="165.45153463856397" />
-      <entry key="W1" value="170.19367877643984" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0001055343299936" />
+      <entry key="S2" value="1.1013557611293119" />
+      <entry key="S5" value="1.4002574053281513" />
+      <entry key="S10" value="1.6326589960856888" />
+      <entry key="S30" value="1.8584663550027625" />
+      <entry key="S60" value="1.9271600115790974" />
+      <entry key="M2" value="2.0350822750243074" />
+      <entry key="M5" value="3.6559989561444586" />
+      <entry key="M10" value="7.403763594589837" />
+      <entry key="M15" value="11.18863503797591" />
+      <entry key="M30" value="26.14368262989945" />
+      <entry key="H1" value="60.378982481585844" />
+      <entry key="H2" value="105.86515722716138" />
+      <entry key="H4" value="145.077629162947" />
+      <entry key="D1" value="191.68427302210227" />
+      <entry key="W1" value="201.3369429889498" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
       <entry key="S2" value="0.0" />
-      <entry key="S5" value="5.335340810077274E-131" />
-      <entry key="S10" value="7.304341729462874E-66" />
-      <entry key="S30" value="1.9402619238821903E-22" />
-      <entry key="S60" value="1.3929328497390627E-11" />
-      <entry key="M2" value="3.732201561731443E-6" />
-      <entry key="M5" value="0.006741957897761308" />
-      <entry key="M10" value="0.08210942636361133" />
-      <entry key="M15" value="0.18891307273936428" />
-      <entry key="M30" value="0.4346413150396133" />
-      <entry key="H1" value="0.6592733234703293" />
-      <entry key="H2" value="0.8119564788031004" />
-      <entry key="H4" value="0.9010862771139622" />
-      <entry key="D1" value="0.9827907553542293" />
-      <entry key="W1" value="0.9975232087763127" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="2.452793279208862E-186" />
+      <entry key="S30" value="1.3486118844226734E-62" />
+      <entry key="S60" value="1.1612975003945668E-31" />
+      <entry key="M2" value="3.4077815370040444E-16" />
+      <entry key="M5" value="6.501127720825954E-7" />
+      <entry key="M10" value="8.062957100732942E-4" />
+      <entry key="M15" value="0.00866289198642969" />
+      <entry key="M30" value="0.09307465813222032" />
+      <entry key="H1" value="0.305081395912993" />
+      <entry key="H2" value="0.552341738340489" />
+      <entry key="H4" value="0.7431969714284954" />
+      <entry key="D1" value="0.9517378074918315" />
+      <entry key="W1" value="0.9929583814244116" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.3159936202695997" />
-      <entry key="MS500" value="3.3802563237451966" />
-      <entry key="S2" value="5.567010008727457" />
-      <entry key="S5" value="6.360899405256236" />
-      <entry key="S10" value="6.668193291248997" />
-      <entry key="S30" value="6.886543918610344" />
-      <entry key="S60" value="6.9429069655816384" />
-      <entry key="M2" value="6.973138187692503" />
-      <entry key="M5" value="7.592093333629916" />
-      <entry key="M10" value="12.68735873455735" />
-      <entry key="M15" value="20.644085697770368" />
-      <entry key="M30" value="46.577036374641345" />
-      <entry key="H1" value="83.47857077169543" />
-      <entry key="H2" value="117.74144723118268" />
-      <entry key="H4" value="141.69441069620845" />
-      <entry key="D1" value="166.4342778118778" />
-      <entry key="W1" value="171.1911950300391" />
+      <entry key="MS100" value="0.6461764153187461" />
+      <entry key="MS500" value="0.9164453666830735" />
+      <entry key="S2" value="1.0719926200801537" />
+      <entry key="S5" value="1.3790009762716047" />
+      <entry key="S10" value="1.6182955688325151" />
+      <entry key="S30" value="1.8524619048420186" />
+      <entry key="S60" value="1.9239725668752445" />
+      <entry key="M2" value="2.033276421039567" />
+      <entry key="M5" value="3.653007548946952" />
+      <entry key="M10" value="7.400198763589464" />
+      <entry key="M15" value="11.19288553261283" />
+      <entry key="M30" value="26.233155110147454" />
+      <entry key="H1" value="60.68155741711772" />
+      <entry key="H2" value="106.415943677648" />
+      <entry key="H4" value="145.81994259723984" />
+      <entry key="D1" value="192.63584497780388" />
+      <entry key="W1" value="202.32987715857666" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -134,7 +134,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-WS-262.9437.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-WS-262.10968.77" />
       </set>
     </attachedChunks>
   </component>
@@ -166,7 +166,10 @@
       <workItem from="1791854851340" duration="350000" />
       <workItem from="1791909493979" duration="1129000" />
       <workItem from="1791910657298" duration="3653000" />
-      <workItem from="1791924202573" duration="4818000" />
+      <workItem from="1791924202573" duration="5163000" />
+      <workItem from="1792007347246" duration="163000" />
+      <workItem from="1792007535569" duration="581000" />
+      <workItem from="1792010716220" duration="7004000" />
     </task>
     <task id="LOCAL-00001" summary="Se agrego la parte teorica sem03.02">
       <option name="closed" value="true" />
@@ -208,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1791516651183</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Se agregó ejercicios de la semana 10 sesion 1, ejercicios de repaso del 19 al 25">
+      <option name="closed" value="true" />
+      <created>1791929058918</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1791929058918</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +230,7 @@
     <MESSAGE value="Se agrego la resolucion de la Practica calificada 1" />
     <MESSAGE value="Se agrego la resolucion de la Practica calificada 1 y mejoraron las imegenes SVG" />
     <MESSAGE value="Se agregó ejercicios de la semana 10 sesion 1, ejercicios de repaso" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se agregó ejercicios de la semana 10 sesion 1, ejercicios de repaso" />
+    <MESSAGE value="Se agregó ejercicios de la semana 10 sesion 1, ejercicios de repaso del 19 al 25" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregó ejercicios de la semana 10 sesion 1, ejercicios de repaso del 19 al 25" />
   </component>
 </project>

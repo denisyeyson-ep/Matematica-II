@@ -19,54 +19,306 @@ import Ejercicio from '../../components/Ejercicio.astro';
 
 ## I. SECCIONES CÓNICAS
 
-<Ejercicio numero={1} titulo="Determine la forma canónica" geogebraId="" dificultad="Intermedio">
+<Ejercicio numero={1} titulo="Determine la forma canónica" geogebraId="cgzs8ykg" archivo="/geogebra/semana-10/sesion-01/cgzs8ykg.ggb" dificultad="Intermedio">
 
     **Enunciado.** La trayectoria de una partícula está dada por $x^2 − 8x + 16y + 16 = 0$.
     Determine la forma canónica e indique a que cónica representa, además indique su vértice,
     foco, directriz y eje de simetría, y represente gráficamente la sección cónica.
 
+    ### Paso 1: Agrupamos los términos en $x$ y completamos cuadrados.
+
+    $$
+    \begin{gather*}
+    x^2-8x=-16y-16\\[15pt]
+    x^2-8x+16=-16y-16+16\\[15pt]
+    (x-4)^2=-16y
+    \end{gather*}
+    $$
+
+    ### Paso 2: Identificamos la cónica.
+
+    La ecuación tiene la forma $(x-h)^2=4p(y-k)$, con una sola variable al cuadrado, por lo tanto es una **parábola** vertical.
+
+    $$
+    \begin{gather*}
+    h=4,\quad k=0\\[15pt]
+    4p=-16 \;\Rightarrow\; p=-4
+    \end{gather*}
+    $$
+
+    Como $p<0$, la parábola **abre hacia abajo**.
+
+    ### Paso 3: Elementos de la parábola.
+
+    $$
+    \begin{gather*}
+    \text{Vértice: } V(h,k)=(4,\,0)\\[15pt]
+    \text{Foco: } F(h,\,k+p)=(4,\,-4)\\[15pt]
+    \text{Directriz: } y=k-p \;\Rightarrow\; y=4\\[15pt]
+    \text{Eje de simetría: } x=4
+    \end{gather*}
+    $$
+
+    **Respuesta:** Forma canónica $(x-4)^2=-16y$. Es una parábola con vértice $(4,0)$, foco $(4,-4)$, directriz $y=4$ y eje de simetría $x=4$.
+
 </Ejercicio>
 
-<Ejercicio numero={2} titulo="Determine la forma canónica" geogebraId="" dificultad="Intermedio">
+<Ejercicio numero={2} titulo="Determine la forma canónica" geogebraId="jupwmbum" archivo="/geogebra/semana-10/sesion-01/jupwmbum.ggb" dificultad="Intermedio">
 
     **Enunciado.** Una empresa de telecomunicaciones desea instalar una antena en una zona cuya cobertura
     está representada por: $9x^2 + 9y^2 − 36x + 54y + 36 = 0$. Determine la forma canónica e indique a que cónica representa,
     además indique su vértice, foco, directriz y eje de simetría, y represente gráficamente la sección cónica.
 
+    ### Paso 1: Dividimos entre $9$ y agrupamos.
+
+    $$
+    \begin{gather*}
+    9x^2+9y^2-36x+54y+36=0\\[15pt]
+    x^2+y^2-4x+6y+4=0\\[15pt]
+    (x^2-4x)+(y^2+6y)=-4
+    \end{gather*}
+    $$
+
+    ### Paso 2: Completamos cuadrados.
+
+    $$
+    \begin{gather*}
+    (x^2-4x+4)+(y^2+6y+9)=-4+4+9\\[15pt]
+    (x-2)^2+(y+3)^2=9
+    \end{gather*}
+    $$
+
+    ### Paso 3: Identificamos la cónica.
+
+    Los coeficientes de $x^2$ y $y^2$ son iguales, por lo tanto es una **circunferencia**:
+
+    $$
+    \begin{gather*}
+    \text{Centro: } C(2,\,-3)\\[15pt]
+    \text{Radio: } r=\sqrt{9}=3
+    \end{gather*}
+    $$
+
+    ### Paso 4: Elementos de la circunferencia.
+
+    $$
+    \begin{gather*}
+    \text{Centro: } C(2,\,-3)\\[8pt]
+    \text{Radio: } r=\sqrt{9}=3\\[8pt]
+    \text{Diámetro: } d=2r=2(3)=6
+    \end{gather*}
+    $$
+
+    **Respuesta:** Forma canónica $(x-2)^2+(y+3)^2=9$. Es una circunferencia de centro $(2,-3)$ y radio $3$.
+
 </Ejercicio>
 
-<Ejercicio numero={3} titulo="Determine la forma canónica" geogebraId="" dificultad="Intermedio">
+<Ejercicio numero={3} titulo="Determine la forma canónica" geogebraId="desrxgkh" archivo="/geogebra/semana-10/sesion-01/desrxgkh.ggb" dificultad="Intermedio">
 
     **Enunciado.** Determine el tipo de cónica, focos y vértices: $4x^2 + 9y^2 − 16x + 18y − 11 = 0$.
     Determine la forma canónica e indique a que cónica representa, además indique su vértice, foco,
     directriz y eje de simetría, y represente gráficamente la sección cónica.
 
+    ### Paso 1: Agrupamos y factorizamos los coeficientes.
+
+    $$
+    \begin{gather*}
+    4x^2-16x+9y^2+18y=11\\[15pt]
+    4(x^2-4x)+9(y^2+2y)=11
+    \end{gather*}
+    $$
+
+    ### Paso 2: Completamos cuadrados.
+
+    $$
+    \begin{gather*}
+    4(x^2-4x+4)+9(y^2+2y+1)=11+16+9\\[15pt]
+    4(x-2)^2+9(y+1)^2=36
+    \end{gather*}
+    $$
+
+    ### Paso 3: Dividimos entre $36$.
+
+    $$
+    \dfrac{(x-2)^2}{9}+\dfrac{(y+1)^2}{4}=1
+    $$
+
+    ### Paso 4: Identificamos la cónica.
+
+    Es una **elipse** con eje mayor horizontal (el mayor denominador está bajo $x$):
+
+    $$
+    \begin{gather*}
+    C(2,\,-1),\quad a^2=9 \Rightarrow a=3,\quad b^2=4 \Rightarrow b=2\\[15pt]
+    c^2=a^2-b^2=9-4=5 \;\Rightarrow\; c=\sqrt{5}\\[15pt]
+    e=\dfrac{c}{a}=\dfrac{\sqrt{5}}{3}
+    \end{gather*}
+    $$
+
+    ### Paso 5: Elementos de la elipse.
+
+    $$
+    \begin{gather*}
+    \text{Vértices: } (2\pm 3,\,-1)\;\Rightarrow\; V_1(5,-1),\; V_2(-1,-1)\\[15pt]
+    \text{Extremos del eje menor: } (2,\,-1\pm 2)\;\Rightarrow\; (2,1),\;(2,-3)\\[15pt]
+    \text{Focos: } (2\pm\sqrt{5},\,-1)\;\Rightarrow\; F_1(2+\sqrt{5},-1),\; F_2(2-\sqrt{5},-1)\\[15pt]
+    \text{Eje focal (mayor): } y=-1\\[15pt]
+    \text{Eje menor: } x=2\\[15pt]
+    \text{Directrices: } x=h\pm\dfrac{a^2}{c}=2\pm\dfrac{9\sqrt{5}}{5}
+    \end{gather*}
+    $$
+
+    **Respuesta:** Forma canónica $\dfrac{(x-2)^2}{9}+\dfrac{(y+1)^2}{4}=1$. Es una elipse horizontal con centro $(2,-1)$, vértices $(5,-1)$ y $(-1,-1)$, y focos $(2\pm\sqrt{5},-1)$,
+    eje mayor $y=-1$, eje menor $x=2$ y directrices $x=2\pm\dfrac{9\sqrt{5}}{5}$
+
 </Ejercicio>
 
-<Ejercicio numero={4} titulo="Determine la forma canónica" geogebraId="" dificultad="Intermedio">
+<Ejercicio numero={4} titulo="Determine la forma canónica" geogebraId="wekrzqj6" archivo="/geogebra/semana-10/sesion-01/wekrzqj6.ggb" dificultad="Intermedio">
 
     **Enunciado.** Determine los elementos principales y represente gráficamente: $x^2 − 6x − 8y + 25 = 0$.
     Determine la forma canónica e indique a que cónica representa, además indique su vértice, foco,
     directriz y eje de simetría, y represente gráficamente la sección cónica.
 
+    ### Paso 1: Agrupamos los términos en $x$ y completamos cuadrados.
+
+    $$
+    \begin{gather*}
+    x^2-6x=8y-25\\[15pt]
+    x^2-6x+9=8y-25+9\\[15pt]
+    (x-3)^2=8y-16\\[15pt]
+    (x-3)^2=8(y-2)
+    \end{gather*}
+    $$
+
+    ### Paso 2: Identificamos la cónica.
+
+    Tiene la forma $(x-h)^2=4p(y-k)$, por lo tanto es una **parábola** vertical:
+
+    $$
+    \begin{gather*}
+    h=3,\quad k=2\\[15pt]
+    4p=8 \;\Rightarrow\; p=2
+    \end{gather*}
+    $$
+
+    Como $p>0$, la parábola **abre hacia arriba**.
+
+    ### Paso 3: Elementos de la parábola.
+
+    $$
+    \begin{gather*}
+    \text{Vértice: } V(3,\,2)\\[15pt]
+    \text{Foco: } F(h,\,k+p)=(3,\,4)\\[15pt]
+    \text{Directriz: } y=k-p \;\Rightarrow\; y=0\\[15pt]
+    \text{Eje de simetría: } x=3
+    \end{gather*}
+    $$
+
+    **Respuesta:** Forma canónica $(x-3)^2=8(y-2)$. Es una parábola vertical con vértice $(3,2)$, foco $(3,4)$, directriz $y=0$ y eje de simetría $x=3$.
+
 </Ejercicio>
 
-<Ejercicio numero={5} titulo="Determine la forma canónica" geogebraId="" dificultad="Intermedio">
+<Ejercicio numero={5} titulo="Determine la forma canónica" geogebraId="fpx3bs9c" archivo="/geogebra/semana-10/sesion-01/fpx3bs9c.ggb" dificultad="Intermedio">
 
     **Enunciado.** Un sistema de control describe una trayectoria mediante $y^2 − 8y − 12x + 28 = 0$.
     Determine la forma canónica e indique a que cónica representa, además indique su vértice, foco,
     directriz y eje de simetría, y represente gráficamente la sección cónica.
 
+    ### Paso 1: Agrupamos los términos en $y$ y completamos cuadrados.
+
+    $$
+    \begin{gather*}
+    y^2-8y=12x-28\\[15pt]
+    y^2-8y+16=12x-28+16\\[15pt]
+    (y-4)^2=12x-12\\[15pt]
+    (y-4)^2=12(x-1)
+    \end{gather*}
+    $$
+
+    ### Paso 2: Identificamos la cónica.
+
+    Tiene la forma $(y-k)^2=4p(x-h)$, por lo tanto es una **parábola** horizontal:
+
+    $$
+    \begin{gather*}
+    h=1,\quad k=4\\[15pt]
+    4p=12 \;\Rightarrow\; p=3
+    \end{gather*}
+    $$
+
+    Como $p>0$, la parábola **abre hacia la derecha**.
+
+    ### Paso 3: Elementos de la parábola.
+
+    $$
+    \begin{gather*}
+    \text{Vértice: } V(1,\,4)\\[15pt]
+    \text{Foco: } F(h+p,\,k)=(4,\,4)\\[15pt]
+    \text{Directriz: } x=h-p \;\Rightarrow\; x=-2\\[15pt]
+    \text{Eje de simetría: } y=4
+    \end{gather*}
+    $$
+
+    **Respuesta:** Forma canónica $(y-4)^2=12(x-1)$. Es una parábola horizontal con vértice $(1,4)$, foco $(4,4)$, directriz $x=-2$ y eje de simetría $y=4$.
+
 </Ejercicio>
 
-<Ejercicio numero={6} titulo="Determine la forma canónica" geogebraId="" dificultad="Intermedio">
+<Ejercicio numero={6} titulo="Determine la forma canónica" geogebraId="njqtw6kf" archivo="/geogebra/semana-10/sesion-01/njqtw6kf.ggb" dificultad="Intermedio">
 
-    **Enunciado.** A partir de la ecuación general: $16x 2 + 25y 2 − 64x + 150y + 144 = 0$.
+    **Enunciado.** A partir de la ecuación general: $16x^2 + 25y^2 − 64x + 150y + 144 = 0$.
     <ul>
         <ol>a. Obtenga la ecuación reducida ordinario e indique qué tipo de cónica representa.</ol>
         <ol>b. Determine elementos de la cónica.</ol>
         <ol>c. Represente gráficamente.</ol>
     </ul>
+
+    ### a) Ecuación reducida y tipo de cónica.
+
+    **Paso 1: Agrupamos y factorizamos los coeficientes.**
+
+    $$
+    \begin{gather*}
+    16(x^2-4x)+25(y^2+6y)=-144
+    \end{gather*}
+    $$
+
+    **Paso 2: Completamos cuadrados.**
+
+    $$
+    \begin{gather*}
+    16(x^2-4x+4)+25(y^2+6y+9)=-144+64+225\\[15pt]
+    16(x-2)^2+25(y+3)^2=145
+    \end{gather*}
+    $$
+
+    **Paso 3: Dividimos entre $145$.**
+
+    $$
+    \dfrac{(x-2)^2}{\dfrac{145}{16}}+\dfrac{(y+3)^2}{\dfrac{29}{5}}=1
+    $$
+
+    Los dos denominadores son positivos y distintos, por lo tanto es una **elipse** con eje mayor horizontal, ya que $\dfrac{145}{16}>\dfrac{29}{5}$.
+
+    ### b) Elementos de la elipse.
+
+    $$
+    \begin{gather*}
+    \text{Centro: }C(2,\,-3)\\[15pt]
+    \text{Semieje mayor: }a^2=\dfrac{145}{16} \Rightarrow a=\dfrac{\sqrt{145}}{4}\approx 3.01\\[15pt]
+    \text{Semieje menor: }b^2=\dfrac{29}{5} \Rightarrow b=\dfrac{\sqrt{145}}{5}\approx 2.41\\[15pt]
+    \text{Distancia focal: }c^2=a^2-b^2=\dfrac{145}{16}-\dfrac{29}{5}=\dfrac{261}{80} \Rightarrow c=\dfrac{3\sqrt{145}}{20}\approx 1.81\\[15pt]
+    \text{Excentricidad: }e=\dfrac{c}{a}=\dfrac{3}{5}=0.6\\[15pt]
+    \text{Vértices: } \left(2\pm\dfrac{\sqrt{145}}{4},\,-3\right)\approx(5.01,\,-3),\;(-1.01,\,-3)\\[15pt]
+    \text{Extremos del eje menor: } \left(2,\,-3\pm\dfrac{\sqrt{145}}{5}\right)\approx(2,\,-0.59),\;(2,\,-5.41)\\[15pt]
+    \text{Focos: } \left(2\pm\dfrac{3\sqrt{145}}{20},\,-3\right)\approx(3.81,\,-3),\;(0.19,\,-3)\\[15pt]
+    \text{Directrices: } x=2\pm\dfrac{a}{e}=2\pm\dfrac{5\sqrt{145}}{12}\approx 7.02,\;-3.02\\[15pt]
+    \text{Eje focal (mayor): } y=-3\\[15pt]
+    \text{Eje menor: } x=2\\[15pt]
+    \text{Longitud de los ejes: } 2a=\dfrac{\sqrt{145}}{2} \approx 6.02 ; 2b=\dfrac{2\sqrt{145}}{5} \approx 4.82
+    \end{gather*}
+    $$
+
+    ### c) Representación gráfica.
 
 </Ejercicio>
 
